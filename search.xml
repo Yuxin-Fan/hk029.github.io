@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[GitBook入门（用github做出第一本书）——超详细配图说明]]></title>
+      <url>http://voidsky.top/2016/05/10/GitBook%E5%85%A5%E9%97%A8%EF%BC%88%E7%94%A8github%E5%81%9A%E5%87%BA%E7%AC%AC%E4%B8%80%E6%9C%AC%E4%B9%A6%EF%BC%89%E2%80%94%E2%80%94%E8%B6%85%E8%AF%A6%E7%BB%86%E9%85%8D%E5%9B%BE%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>我最近接触到gitbook，发现它支持markdown和git，刚好把我之前在github上的笔记可以生成一本书，于是我就开始着手捣鼓gitbook，一下午的时间就弄的差不多了，说明这个东西还是挺容易的，可以看看我的书：<br><a href="https://www.gitbook.com/book/hk029/leetbook/details" target="_blank" rel="external">《LeetBook（LeetCode详解）》</a>。</p>
+</blockquote>
+<p>比较建议直接在github上部署你的框架，然后再导入gitbook。</p>
+<a id="more"></a>
+<h1 id="创建一个新的仓库"><a href="#创建一个新的仓库" class="headerlink" title="创建一个新的仓库"></a><strong>创建一个新的仓库</strong></h1><p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460872938384.png" alt="Alt text"></p>
+<p>创建过程不需要我细讲了把，如果不知道，看看<a href="http://blog.csdn.net/hk2291976/article/details/51137938" target="_blank" rel="external">github入门</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873055201.png" alt="Alt text"></p>
+<p>创建一个新文件，名为SUMMARY.md，里面填入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#  Summary</span><br><span class="line">* [前言](README.md)</span><br></pre></td></tr></table></figure></p>
+<h1 id="创建一本书"><a href="#创建一本书" class="headerlink" title="创建一本书"></a><strong>创建一本书</strong></h1><p>首先进入gitbook的官网：<a href="https://www.gitbook.com/" target="_blank" rel="external">https://www.gitbook.com/</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873213405.png" alt="Alt text"></p>
+<p>点红色部分，用github登录</p>
+<p>登录之后，点+NewBook</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873150045.png" alt="Alt text"></p>
+<p>点到github，点击Link to your Github</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873281405.png" alt="Alt text"></p>
+<p>授权完毕然后再点到这个页面</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873361930.png" alt="Alt text"></p>
+<p>选择你需要导入的仓库，我们用刚才创建的testbook，然后标题可以自己取，下面的地址只能填英文，然后点创建</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873428115.png" alt="Alt text"></p>
+<p>这个页面目前是在同步，等同步完毕后，就可以看到自己的书了。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873464695.png" alt="Alt text"></p>
+<p>可以点击read</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873476030.png" alt="Alt text"></p>
+<p>可以发现里面就1页，就是我们刚才SUMMARY.md写的内容</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873506328.png" alt="Alt text"></p>
+<h1 id="增加内容"><a href="#增加内容" class="headerlink" title="增加内容"></a><strong>增加内容</strong></h1><p>我们退回上一步，点edit</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873568057.png" alt="Alt text"></p>
+<p>可以看到如下界面</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873685992.png" alt="Alt text"></p>
+<p>我们点开<img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873711587.png" alt="Alt text"></p>
+<p>可以同步显示编辑后的效果</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873727085.png" alt="Alt text"></p>
+<p>现在我们就可以完成我们的书的录入了，在目录区点击右键，可以新建一个内容页</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873769499.png" alt="Alt text"></p>
+<p>然后点击一下，会提示创建一个文件</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873827988.png" alt="Alt text"></p>
+<p>然后你会发现在github上也多了一个文件，这就关联起来了。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873857715.png" alt="Alt text"></p>
+<p>我们再看SUMMARY里面多了一个“第一页”</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873897194.png" alt="Alt text"></p>
+<p>我们双击一下，发现就是markdown的超链接，原来这就是gitbook的内容组织方式，通过超连接把内容和github上文件关联起来。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460873916920.png" alt="Alt text"></p>
+<p>我们修改一下名字，然后把他缩进一个tab，保存看看有什么变化</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460874020305.png" alt="Alt text"></p>
+<p>可以发现目录结构变了，然后名字也变了</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460874055419.png" alt="Alt text"></p>
+<p>通过修改SUMMARY.md你可以轻松的组织你的书</p>
+<h1 id="书的框架"><a href="#书的框架" class="headerlink" title="书的框架"></a><strong>书的框架</strong></h1><p>一般来说，你的书得有一个README.md和一个SUMMARY.md。<br>其中SUMMARY.md是最重要的，它代表了整个书的框架，也是我们主要需要修改的地方。</p>
+<p>当你考虑好要写一本书，你可以先粗略的想好大概要分几部分，对这几部分弄一个文件夹。然后把对应的markdown文件放进去。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460874300564.png" alt="Alt text"></p>
+<p>然后push到github上，然后再在gitbook上修改SUMAARY使得新加的文件得以跟gitbook关联</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460879564173.png" alt="Alt text"></p>
+<p>关于地址的获取有个小诀窍，就是点击文件，邮件，有个重命名，这里可以看到文件的完整地址，复制就好。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460879603953.png" alt="Alt text"></p>
+<p>最后，可以在自己的书的主页点击read看看效果</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/工具/GitBook入门/1460879667049.png" alt="Alt text"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【Python爬虫】入门知识]]></title>
+      <url>http://voidsky.top/2016/05/10/%E3%80%90Python%E7%88%AC%E8%99%AB%E3%80%91%E5%85%A5%E9%97%A8%E7%9F%A5%E8%AF%86/</url>
+      <content type="html"><![CDATA[<h1 id="爬虫基本知识"><a href="#爬虫基本知识" class="headerlink" title="爬虫基本知识"></a><strong>爬虫基本知识</strong></h1><hr>
+<p>这阵子需要用爬虫做点事情，于是系统的学习了一下python爬虫，觉得还挺有意思的，比我想象中的能干更多的事情，这里记录下学习的经历。</p>
+<p>网上有关爬虫的资料特别多，写的都挺复杂的，我这里不打算讲什么大道理，因为其实爬虫挺好理解的。就是下面一个流程：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-5b0e9655255b2b83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="人生日历截图20160513201530.png"></p>
+<a id="more"></a>
+<p>爬虫的功能就是把网页源代码想办法爬下来，然后分析出需要的内容。总结起来就是2个部分：</p>
+<ol>
+<li>爬</li>
+<li>提取</li>
+</ol>
+<p>所以，整个爬虫需要掌握的技能，就是如何高效的爬，如何快速的分析提取所需要的内容。</p>
+<h1 id="如何爬？"><a href="#如何爬？" class="headerlink" title="如何爬？"></a><strong>如何爬？</strong></h1><h2 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a><strong>Requests</strong></h2><p>说实话，之前为了找爬虫的教程，走了挺多弯路的，因为现在很多教程刚上来就介绍urllib，urllib2这两个python自带的有关网页的包，所以刚开始我的单线程爬虫实现也都是基于urllib的，不仅代码多，而且效率还低。实际上，目前来说，这两个已经很过时了，目前用的比较多的是requests这个第三方包（这里我也是偶然间发现极客学院有关爬虫的视频，让我少走那么多弯路，这里我就不说是什么视频了，以免有广告的嫌疑，大家有兴趣的可以自己去搜）。<br>正如requests的官方网页说的：</p>
+<blockquote>
+<p>Requests: HTTP for Humans</p>
+</blockquote>
+<p>它目前应该是python下最好的Http库了。它还有很多别的特性：</p>
+<blockquote>
+<p>Requests 使用的是 urllib3，继承了urllib2的所有特性。Requests支持HTTP连接保持和连接池，支持使用cookie保持会话，支持文件上传，支持自动确定响应内容的编码，支持国际化的 URL 和 POST 数据自动编码。</p>
+</blockquote>
+<p>上面介绍的是单线程爬虫，然后，如果要提高爬的效率，并行化肯定必不可少，那么scrapy就可以解决你的问题。然后还有js动态加载的问题。那些我以后也会慢慢加上来。</p>
+<h2 id="Requests安装"><a href="#Requests安装" class="headerlink" title="Requests安装"></a><strong>Requests安装</strong></h2><pre><code>pip install requests
+</code></pre><p>所有的python第三方包的安装都可以用pip，如果cmd中无法输入pip命令，请把C:\Python27\Scripts加入PATH环境变量。</p>
+<p>注：这里不推荐使用easy_install  因为这个只管安装，不管卸载。</p>
+<h2 id="Requests使用"><a href="#Requests使用" class="headerlink" title="Requests使用"></a><strong>Requests使用</strong></h2><p>基本知道一个requests.get()和requests.post()就行了。</p>
+<p>同样它还有<br>requests.head()<br>requests.delete()<br>功能，不过用的不多。需要的时候，查手册就好了。<br>这里有个文档写requests写的挺全面的。可以看看：<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="external">requests快速上手</a></p>
+<p>requests的返回值可以有多种形式输出，最常用的是<br>“.text”和”.content”，前者输出unicode，后者输出二进制<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests  </span><br><span class="line">url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">html = requests.get(url)</span><br><span class="line"><span class="keyword">print</span> html.text</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt;&lt;meta content=&quot;always&quot; name=&quot;referrer&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;# 2932e1&quot;&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&lt;link rel=&quot;search&quot; type=&quot;application/opensearchdescription+xml&quot; href=&quot;/content-search.xml&quot; title=&quot;百度搜索&quot; /&gt;&lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; mask href=&quot;//www.baidu.com/img/baidu.svg&quot;&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//s1.bdstatic.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t1.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t2.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t3.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t10.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t11.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t12.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//b1.bdstatic.com&quot;/&gt;&lt;title&gt;百度一下，你就知道&lt;/title&gt;</span><br><span class="line">……</span><br><span class="line">……</span><br></pre></td></tr></table></figure></p>
+<h1 id="如何提取？"><a href="#如何提取？" class="headerlink" title="如何提取？"></a><strong>如何提取？</strong></h1><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a><strong>正则表达式</strong></h2><p>正则表达式是一个大头！很多也都听过正则表达式，第一印象就是记不住，但是其实也不用特别记忆，因为在爬虫里，用的最多的基本就一个</p>
+<pre><code>(.*?)
+</code></pre><blockquote>
+<p>(    ) ：表示这个内容是我们需要提取的<br>.*     ：表示匹配任意字符0到n次<br>？：表示非贪心，找对第一个就停下来</p>
+</blockquote>
+<p>我来解释下为什么在爬虫里只要这个pattern就行了。<br>在html网页源代码中，我们需要找的内容一般都是被某些标签包围的，如果我们能保证找到我们需要的内容左右的标签（并且他们是独一无二的）那么我们很容易写出一个正则表达式：</p>
+<pre><code>&lt;XXX&gt;(.*?)&lt;/XXX&gt;
+</code></pre><p>把其中的内容提取出来</p>
+<h2 id="python正则模块使用"><a href="#python正则模块使用" class="headerlink" title="python正则模块使用"></a><strong>python正则模块使用</strong></h2><p>python的正则模块是re，主要用的函数是（re.S的意思是让”.”可以匹配换行符，不然有些标签头和尾是分几行的，就会匹配失败）</p>
+<pre><code>findall(pattern,str,re.S)
+</code></pre><p>主力部队，把所有满足正则的内容提取出来，用于匹配满足某个条件的大量我们需要的内容。（比如所有的图片，所有的网址，所有的回复，所有的链接……）。它在网页提取中占了主要地位，工作量大，任务重，所以是主力部队。</p>
+<pre><code>search(pattern,str,re.S)
+</code></pre><p>狙击手，用来匹配第一个找到的元素，它的目标目的就是找到我们明显知道只有一个的元素比如标题什么的，一旦找到就结束，所以它的执行速度很快。它的目标明确，效率高，所以是狙击手的角色。</p>
+<pre><code>sub(pattern,str,replace)
+</code></pre><p>后勤，它的功能是替换，一般用于替换一个网页地址中的关键词，替换页码等。它看似不重要，但是往往能在很多方面给我们提供便利，所以是后勤。</p>
+<p>注意：正则有时候一步不能完成我们需要的功能，可能需要进行几步操作，这时候，我们一般先提取大的部分，在从大部分里面提取我们需要的部分</p>
+<p>我们看个很简单的例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设下面是一个源码，我想保存里面所有的链接</span></span><br><span class="line">text = <span class="string">'&lt;a href = "www.baidu.com"&gt;....'</span></span><br><span class="line">urls = re.findall(<span class="string">'&lt;a href = (.*?)&gt;'</span>,text,re.S)</span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> urls:</span><br><span class="line">	<span class="keyword">print</span> each</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设我需要爬取当前网页的头部</span></span><br><span class="line">html = <span class="string">'''</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;爬虫的基本知识&lt;/title&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">……</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">'''</span></span><br><span class="line"><span class="keyword">print</span> re.search(<span class="string">'&lt;title&gt;(.*?)&lt;/title&gt;'</span>,html,re.S).group(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 这里group(1)表示第一个括号的内容，如果正则里面有多个括号，这里可以通过group(i)返回第i个空格里的内容</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设下面是一个贴吧的帖子地址，有很多页，每一页就是靠后面的pn=几来区分的，我们输出前10页的网址</span></span><br><span class="line">Pages = <span class="string">'http://tieba.baidu.com/p/4342201077?pn=1'</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>): </span><br><span class="line">	<span class="keyword">print</span> re.sub(<span class="string">'pn=\d'</span>,<span class="string">'pn=%d'</span>%i,Pages)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;www.baidu.com&quot;</span><br><span class="line">爬虫的基本知识</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=0</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=1</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=2</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=3</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=4</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=5</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=6</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=7</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=8</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=9</span><br></pre></td></tr></table></figure>
+<h2 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a><strong>XPath</strong></h2><p>如果说正则表达式就已经让你觉得很神奇了，那XPath真是要吓死你了。这真是个神器，它让提取信息网页信息变得更加轻松。XPath是一个树型的结构，比较符合“html”的层次结构。</p>
+<blockquote>
+<p>XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言。XPath基于XML的树状结构，提供在数据结构树中找寻节点的能力。起初 XPath 的提出的初衷是将其作为一个通用的、介于XPointer与XSLT间的语法模型。但是 XPath 很快的被开发者采用来当作小型查询语言。</p>
+</blockquote>
+<p>我觉得视频中老师的解释超精彩：如果你提取信息就像让你找一栋建筑，那么正则就是告诉你建筑左边是什么，右边是什么，但是全国可能有很多都满足条件的，你找起来还是不方便。</p>
+<pre><code>红房子(.*?)绿房子
+</code></pre><p>XPath就是告诉你，这个建筑在北京市——海淀区——中关村——15号街——那栋黄色的建筑，你可以马上找到对应的建筑。如果一个地名只有一个地方有，那么你更可以简化成“中关村——15号街”</p>
+<pre><code>//北京市/海淀区/中关村/15号街[@房子颜色=黄色]/text()
+//中关村/15号[@房子颜色=黄色]/text()
+</code></pre><p>也许在这里你还没能体会到他们之间的差别，但是相信我，当你遇到复杂的html分析的时候，你会发现它的厉害之处的。比如下面的例子，我想把Hello，my world!打印出来用正则需要考虑一下吧？但是用XPath就简单很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;class&quot;&gt;Hello，</span><br><span class="line">    &lt;font color=red&gt;my</span><br><span class="line">	world!</span><br><span class="line">&lt;div&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="XPath语法"><a href="#XPath语法" class="headerlink" title="XPath语法"></a><strong>XPath语法</strong></h3><p>XPath你只需要知道这些语法</p>
+<blockquote>
+<p>//  根节点<br>/ 下一层路径<br>[@XX=xx]  特定的标签</p>
+<p>/text()   以文本返回<br>/@para  返回参数</p>
+<p>string(.)   当前层的所有内容作为一个字符串输出<br>start-with(str)  所有以这个str开头的标签</p>
+</blockquote>
+<p>下面是一个简单的例子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">html=</span><br><span class="line"><span class="string">'''</span><br><span class="line">&lt;div id="test1"&gt;content1&lt;/div&gt;</span><br><span class="line">&lt;div id="test2"&gt;content2&lt;/div&gt;</span><br><span class="line">&lt;div id="test3"&gt;content3&lt;/div&gt;</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">selector = etree.HTML(html)</span><br><span class="line">content = selector.XPath(<span class="string">'//div[start-with(@id,"test")]/text()'</span>)</span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> content:</span><br><span class="line">	<span class="keyword">print</span> each</span><br><span class="line"></span><br><span class="line">html1=</span><br><span class="line"><span class="string">'''</span><br><span class="line">&lt;div id="class"&gt;Hello,</span><br><span class="line">    &lt;font color=red&gt;my&lt;/font&gt;</span><br><span class="line">	world!</span><br><span class="line">&lt;div&gt;</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">selector = etree.HTML(html)</span><br><span class="line">tmp = selector.XPath(<span class="string">'//div[@id="class"]'</span>)[<span class="number">0</span>]</span><br><span class="line">info = tmp.XPath(<span class="string">'string(.)'</span>)</span><br><span class="line">content2 = info.replace(<span class="string">'\n'</span>,<span class="string">''</span>)</span><br><span class="line"><span class="keyword">print</span> content2</span><br></pre></td></tr></table></figure>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">content 1</span><br><span class="line">content 2</span><br><span class="line">content 3</span><br><span class="line">Hello,        my        world!</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单]]></title>
+      <url>http://voidsky.top/2016/05/10/%E3%80%90%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E3%80%91scrapy%E5%AE%89%E8%A3%85%E4%B8%8E%E7%9C%9F%E7%9A%84%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E2%80%94%E2%80%94%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A39%E5%88%86%E6%A6%9C%E5%8D%95/</url>
+      <content type="html"><![CDATA[<h1 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a><strong>写在开头</strong></h1><p>现在scrapy的安装教程都明显过时了，随便一搜都是要你安装一大堆的依赖，什么装python（如果别人连python都没装，为什么要学scrapy….）wisted， zope interface，pywin32………现在scrapy的安装真的很简单的好不好！<br>代码我放github上了，可以参考：<br><a href="https://github.com/hk029/doubanbook" target="_blank" rel="external">https://github.com/hk029/doubanbook</a></p>
+<a id="more"></a>
+<h1 id="为什么要用scrapy"><a href="#为什么要用scrapy" class="headerlink" title="为什么要用scrapy"></a><strong>为什么要用scrapy</strong></h1><p>我之前讲过了requests，也用它做了点东西，(<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a>）感觉它就挺好用的呀，那为什么我还要用scrapy呢？</p>
+<p><strong>因为：它！更！好！用！</strong>就这么简单，你只要知道这个就行了。</p>
+<p>我相信所有能找到这篇文章的人多多少少了解了scrapy，我再copy一下它的特点来没太多意义，因为我也不会在这篇文章内深入提。就像你知道系统的sort函数肯定比你自己编的快排好用就行了，如果需要知道为什么它更好，你可以更深入的去看代码，但这里，你只要知道这个爬虫框架别人就专门做这件事的，肯定好用，你只要会用就行。</p>
+<blockquote>
+<p>我希望每个来这里的人，或者每个在找资料的朋友，都能明确自己的目的，我也尽量将文章的标题取的更加的明确。如果这是一篇标题为《快速上手》的文章，那你可能就不要太抱希望于能在这篇文章里找到有关scrapy架构和实现原理类的内容。如果是那样，我可能会取标题为《深入理解scrapy》</p>
+</blockquote>
+<p>好了废话说了那么多，我们就上手把？</p>
+<h1 id="安装scrapy"><a href="#安装scrapy" class="headerlink" title="安装scrapy"></a><strong>安装scrapy</strong></h1><p>一条命令解决所有问题</p>
+<pre><code>pip install scrapy
+</code></pre><p>好吧，我承认如果用的是windows一条命令可能确实不够，因为还要装pywin32</p>
+<p><a href="https://sourceforge.net/projects/pywin32/files/pywin32/" target="_blank" rel="external">https://sourceforge.net/projects/pywin32/files/pywin32/</a></p>
+<p>现在sourceforge变的很慢，如果你们不能打开，我在网盘上也放一个64位的，最新220版本的：<br>链接: <a href="http://pan.baidu.com/s/1geUY6Dd" target="_blank" rel="external">http://pan.baidu.com/s/1geUY6Dd</a> 密码: z2ep</p>
+<p>然后就结束了！！结束了！！好不好！就这么简单！</p>
+<h1 id="豆瓣读书9分书榜单爬取"><a href="#豆瓣读书9分书榜单爬取" class="headerlink" title="豆瓣读书9分书榜单爬取"></a><strong>豆瓣读书9分书榜单爬取</strong></h1><p>我们考虑下做一个什么爬虫呢？简单点，我们做一个豆瓣读书9分书：<br><a href="https://www.douban.com/doulist/1264675/" target="_blank" rel="external">https://www.douban.com/doulist/1264675/</a></p>
+<h2 id="建立第一个scrapy工程"><a href="#建立第一个scrapy工程" class="headerlink" title="建立第一个scrapy工程"></a><strong>建立第一个scrapy工程</strong></h2><p>把scrapy命令的目录加入环境变量，然后输入一条命令</p>
+<pre><code>scrapy startproject doubanbook
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155641934.png" alt=""></p>
+<p>然后你的目录下就有一个文件夹名为doubanbook目录，按照提示，我们cd进目录，然后按提示输入，这里我们爬虫取名为dbbook，网址就是上面的网址</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155705992.png" alt=""></p>
+<h2 id="打开pycharm，新建打开这个文件夹"><a href="#打开pycharm，新建打开这个文件夹" class="headerlink" title="打开pycharm，新建打开这个文件夹"></a><strong>打开pycharm，新建打开这个文件夹</strong></h2><p>关于pytharm的安装配置：<a href="ttp://blog.csdn.net/hk2291976/article/details/51141868" target="_blank" rel="external">Pycharm的配置和使用</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155857681.png" alt=""></p>
+<p>打开后，我们在最顶层的目录上新建一个python文件，取名为main，这是运行的主程序（其实就一行代码，运行爬虫）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155884211.png" alt=""></p>
+<p>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from scrapy import cmdline</span><br><span class="line">cmdline.execute(&quot;scrapy crawl dbbook&quot;.split())</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156039788.png" alt=""></p>
+<p>然后我们进入spider-dbbook，然后把start_urls里面重复的部分删除（如果你一开始在命令行输入网址的时候，没输入<a href="http://www.那就不用改动）然后把allowed_domains注掉" target="_blank" rel="external">http://www.那就不用改动）然后把allowed_domains注掉</a><br>并且，把parse里面改成</p>
+<pre><code>print response.body
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156267799.png" alt=""></p>
+<p>好了，到此第一个爬虫的框架就搭完了，我们运行一下代码。（注意这里选择main.py）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156341747.png" alt=""></p>
+<p>运行一下，发现没打印东西，看看，原来是403<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156401562.png" alt=""></p>
+<p>说明爬虫被屏蔽了，这里要加一个请求头部，模拟浏览器登录</p>
+<p>在settings.py里加入如下内容就可以模拟浏览器了</p>
+<pre><code>USER_AGENT = &apos;Mozilla/5.0 (Windows NT 6.3; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0&apos;
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156486416.png" alt=""></p>
+<p>我们再运行，发现网页内容已经被爬取下来了<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156543601.png" alt=""></p>
+<p>好了，我们的scrapy教程结束！</p>
+<p>如果真这样结束，我知道你会打我。。</p>
+<h2 id="编写xpath提取标题名和作者名"><a href="#编写xpath提取标题名和作者名" class="headerlink" title="编写xpath提取标题名和作者名"></a><strong>编写xpath提取标题名和作者名</strong></h2><p>这里我们就要得分，标题名和作者名<br>观察网页源代码，用f12，我们可以快速找到，这里不细讲怎么找信息的过程了，具体过程，参考上一个教程<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461157571966.png" alt=""></p>
+<p>根据先大后小的原则，我们先用bd doulist-subject，把每个书找到，然后，循环对里面的信息进行提取</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158239363.png" alt=""></p>
+<p>提取书大框架：</p>
+<pre><code>&apos;//div[@class=&quot;bd doulist-subject&quot;]&apos;
+</code></pre><p>提取题目：</p>
+<pre><code>&apos;div[@class=&quot;title&quot;]/a/text()&apos;
+</code></pre><p>提取得分：</p>
+<pre><code>&apos;div[@class=&quot;rating&quot;]/span[@class=&quot;rating_nums&quot;]/text()&apos;
+</code></pre><p>提取作者：（这里用正则方便点）</p>
+<pre><code>&apos;&lt;div class=&quot;abstract&quot;&gt;(.*?)&lt;br&apos;
+</code></pre><h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a><strong>编写代码</strong></h2><p>经过之前的学习，应该很容易写出下面的代码吧：作者那里用正则更方便提取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">selector = scrapy.Selector(response)</span><br><span class="line">      books = selector.xpath(&apos;//div[@class=&quot;bd doulist-subject&quot;]&apos;)</span><br><span class="line">      for each in books:</span><br><span class="line">          title = each.xpath(&apos;div[@class=&quot;title&quot;]/a/text()&apos;).extract()[0]</span><br><span class="line">          rate = each.xpath(&apos;div[@class=&quot;rating&quot;]/span[@class=&quot;rating_nums&quot;]/text()&apos;).extract()[0]</span><br><span class="line">          author = re.search(&apos;&lt;div class=&quot;abstract&quot;&gt;(.*?)&lt;br&apos;,each.extract(),re.S).group(1)</span><br><span class="line">          print &apos;标题:&apos; + title</span><br><span class="line">          print &apos;评分:&apos; + rate</span><br><span class="line">          print author</span><br><span class="line">          print &apos;&apos;</span><br></pre></td></tr></table></figure></p>
+<p>关键这个代码在哪里编写呢？答案就是还记得大明湖……不对，是还记得刚才输出response的位置吗？就是那里，那里就是我们要对数据处理的地方。我们写好代码，这里注意：</p>
+<ol>
+<li>不是用etree来提取了，改为scrapy.Selector了，这点改动相信难不倒聪明的你</li>
+<li>xpath如果要提取内容，需要在后面加上.extract()，略为不适应，但是习惯还好。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461159057657.png" alt=""></p>
+<p>我们看看结果，不好看，对于注重美观的我们来说，简直不能忍</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158841648.png" alt=""></p>
+<p>加入两条代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title = title.replace(&apos; &apos;,&apos;&apos;).replace(&apos;\n&apos;,&apos;&apos;)</span><br><span class="line">           author = author.replace(&apos; &apos;,&apos;&apos;).replace(&apos;\n&apos;,&apos;&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>再看看结果，这才是我们想要的嘛<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158905454.png" alt=""></p>
+<p>好了，剩下的事情就是如何把结果写入文件或数据库了，这里我采用写入文件，因为如果是写入数据库，我又得花时间讲数据库的一些基本知识和操作，还是放在以后再说吧。</p>
+<h2 id="items-py"><a href="#items-py" class="headerlink" title="items.py"></a><strong>items.py</strong></h2><p>好了，我们终于要讲里面别的.py文件了，关于这个items.py，你只要考虑它就是一个存储数据的容器，可以考虑成一个结构体，你所有需要提取的信息都在这里面存着。</p>
+<p>这里我们需要存储3个变量，title，rate，author，所以我在里面加入三个变量，就这么简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title = scrapy.Field()</span><br><span class="line">rate = scrapy.Field()</span><br><span class="line">author = scrapy.Field()</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212313095.png" alt=""></p>
+<h1 id="pipelines-py"><a href="#pipelines-py" class="headerlink" title="pipelines.py"></a><strong>pipelines.py</strong></h1><p>一般来说，如果你要操作数据库什么的，需要在这里处理items，这里有个process_item的函数，你可以把items写入数据库，但是今天我们用不到数据库，scrapy自带了一个很好的功能就是Feed exports，它支持多种格式的自动输出。所以我们直接用这个就好了，pipelines维持不变</p>
+<h2 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a><strong>settings.py</strong></h2><p>Feed 输出需要2个环境变量：</p>
+<blockquote>
+<p>FEED_FORMAT ：指示输出格式，csv/xml/json/<br>FEED_URI : 指示输出位置，可以是本地，也可以是FTP服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FEED_URI = u&apos;file:///G://douban.csv&apos;</span><br><span class="line">FEED_FORMAT = &apos;CSV&apos;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>FEED_URI改成自己的就行了<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212340944.png" alt=""></p>
+<h2 id="dbbook-py修改"><a href="#dbbook-py修改" class="headerlink" title="dbbook.py修改"></a><strong>dbbook.py修改</strong></h2><p>其实也就加了3条命令，是把数据写入item<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212496254.png" alt=""></p>
+<p>当然，你要使用item，需要把item类引入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from doubanbook.items import DoubanbookItem</span><br></pre></td></tr></table></figure></p>
+<p>下面的yield可以让scrapy自动去处理item</p>
+<p>好拉，再运行一下，可以看见G盘出现了一个douban.csv的文件</p>
+<p>用excel打开看一下，怎么是乱码<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212650482.png" alt=""></p>
+<p>没关系又是编码的问题，用可以修改编码的编辑器比如sublime打开一下，<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212709798.png" alt=""></p>
+<p>保存编码为utf-8包含bom，或者用gvim打开：set fileencoding=gbk</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212779777.png" alt=""></p>
+<p>再打开，就正常了</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212813445.png" alt=""></p>
+<h1 id="爬取剩下页面"><a href="#爬取剩下页面" class="headerlink" title="爬取剩下页面"></a><strong>爬取剩下页面</strong></h1><p>这还只保存了一个页面，那剩下的页面怎么办呢？难道要一个个复制网址？？当然不是，我们重新观察网页，可以发现有个后页的链接，里面包含着后一页的网页链接，我们把它提取出来就行了。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213014150.png" alt=""></p>
+<p>因为只有这里会出现<span class="next">标签，所以用xpath轻松提取</span></p>
+<pre><code>&apos;//span[@class=&quot;next&quot;]/link/@href&apos;
+</code></pre><p>然后提取后 我们scrapy的爬虫怎么处理呢？<br>答案还是yield，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yield scrapy.http.Request(url,callback=self.parse)</span><br></pre></td></tr></table></figure></p>
+<p>这样爬虫就会自动执行url的命令了，处理方式还是使用我们的parse函数</p>
+<p>改后的代码这样：</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213209717.png" alt=""></p>
+<p>这里要加一个判断，因为在最后一页，“后一页”的链接就没了。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213275959.png" alt=""></p>
+<p>好了，我们再运行一下（先把之前的csv删除，不然就直接在后面添加了）可以发现，运行的特别快，十几页一下就运行完了，如果你用requests自己编写的代码，可以比较一下，用scrapy快很多，而且是自动化程度高很多。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213336223.png" alt=""></p>
+<p>我们打开csv，可以看见，有345篇文章了，和豆瓣上一致。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213428878.png" alt=""></p>
+<p>好了，这个豆瓣9分图书的爬虫结束了，相信通过这个例子，scrapy也差不多能上手，至少编写一般的爬虫是so easy了！</p>
+<p>目前，我们已经能对付大多数网页的内容了，现在爬本小说啥的应该都轻轻松松了，但是为什么我说大多数呢？因为确实还有一些网页我们应付不来，就是用Ajax动态加载的网页，这怎么办呢？且听下回分解：<br><a href="http://www.jianshu.com/p/f030cba076a2" target="_blank" rel="external">【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）</a></p>
+<p>代码我放github上了，可以参考：<br><a href="https://github.com/hk029/doubanbook" target="_blank" rel="external">https://github.com/hk029/doubanbook</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）]]></title>
+      <url>http://voidsky.top/2016/05/10/%E3%80%90%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E3%80%91scrapy%E7%88%AC%E8%99%AB%E4%B8%8EAjax%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E2%80%94%E2%80%94%E7%88%AC%E5%8F%96%E6%8B%89%E5%8B%BE%E7%BD%91%E8%81%8C%E4%BD%8D%E4%BF%A1%E6%81%AF%EF%BC%881%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h2 id="5-14更新"><a href="#5-14更新" class="headerlink" title="5-14更新"></a>5-14更新</h2><p>注意：目前拉勾网换了json结构，之前是<code>content</code> - <code>result</code> 现在改成了<code>content</code>- <code>positionResult</code> - <code>result</code>,所以大家写代码的时候要特别注意加上一层<code>positionResult</code>的解析。我下面代码已经修改</p>
+<a id="more"></a>
+<!--more-->
+<p>看这篇文章前，请确认你已经看过了我之前的文章，了解了大概爬虫的思路和基本概念，不然，里面很多内容可能会看不懂。</p>
+<p>你至少得先看这个，不然scrapy怎么用的都不知道—&gt;<a href="http://www.jianshu.com/p/fa614bea98eb" target="_blank" rel="external">scrapy安装与真的快速上手——爬取豆瓣9分榜单</a></p>
+<p>然后如果你想了解有关正则和xpath，你还得看这个–&gt;<a href="http://www.jianshu.com/p/74b94eadae15" target="_blank" rel="external">爬虫的基本概念</a></p>
+<p>如果你想下载图片，你可以看看这个–&gt;<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a></p>
+<blockquote>
+<p>现在很多网站都用了一种叫做Ajax（异步加载）的技术，就是说，网页打开了，先给你看上面一部分东西，然后剩下的东西再慢慢加载。<br>所以你可以看到很多网页，都是慢慢的刷出来的，或者有些网站随着你的移动，很多信息才慢慢加载出来。这样的网页有个好处，就是网页加载速度特别快（因为不用一次加载全部内容）。</p>
+</blockquote>
+<p>但是这对我们写爬虫就不方便了，因为你总是爬不到你想要的东西！</p>
+<p>我们举个例子，我因为最近想分析拉勾网有关职位情况的数据，所以我上了他们网站：(注意！爬取的内容仅限于学术交流！请勿用于商业用途！)<br><a href="http://www.lagou.com/zhaopin/" target="_blank" rel="external">http://www.lagou.com/zhaopin/</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235953808.png" alt=""></p>
+<p>可以看到，这里有很多职位信息。注意，这里当我们点下一页</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235973182.png" alt=""></p>
+<p>我们可以发现，网页地址没有更新就直接加载出来了！！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235986276.png" alt=""></p>
+<p>这明显就是一个动态页面，我们写个爬虫来爬一下网页，看看能得到什么内容，现在应该能很快写出（搭出）一个这样的爬虫吧？（其实啥也没有）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237608678.png" alt=""></p>
+<p>可以看到输出，你可以把所有源代码浏览一遍，里面没有任何有关职位的信息！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237689695.png" alt=""></p>
+<p>如果你觉得不直观，我教你一招，我们简单的把它输出到一个html看看</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237819572.png" alt=""></p>
+<p>就是这么个情况。。关键部分呢！空的！！！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237914563.png" alt=""></p>
+<h1 id="寻找可以网页"><a href="#寻找可以网页" class="headerlink" title="寻找可以网页"></a><strong>寻找可以网页</strong></h1><p>这时候要怎么办呢？难道信息就爬不了吗？？</p>
+<p>当然不是，你要想，它只要是显示到网页上了，就肯定在某个地方，只是我们没找到而已。</p>
+<p>只不过，这个时候，我们就要费点功夫了。我们还是回到刚才的网页上去点F12，这时候，我们用network功能</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238001618.png" alt=""></p>
+<p>这时候你可能看到里面没东西，这是因为它只记录打开后的网络资源的信息。<br>我们按F5刷新一下。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238089110.png" alt=""></p>
+<p>你可以看到开始唰唰的刷出东西来了……太快了，我眼睛有点跟不上了，我们等它停下来，我们随便点个资源，会出现右边的框，我们切换到response</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238216601.png" alt=""></p>
+<p>然后我们就开始找可疑的网页资源。首先，图片，css什么之类的可以跳过，这里有个诀窍，就是一般来说，这类数据都会用json存，所以我们尝试在过滤器中输入json</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238679076.png" alt=""></p>
+<p>我们发现了2个资源感觉特别像，其中有个名字直接有position，我们点击右键，在新标签页打开看看</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238727325.png" alt=""></p>
+<p>虽然看上去很乱（密集恐惧症估计忍不了）但是实际上很有条理，全是键值对应的，这就是json格式，特别适合网页数据交换。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238745514.png" alt=""></p>
+<p>这里我们发现就是这个了！所有职位信息都在里面，我们赶紧记录下它的网址</p>
+<h1 id="网页构造"><a href="#网页构造" class="headerlink" title="网页构造"></a><strong>网页构造</strong></h1><p>通过观察网页地址可以发现推测出：<br><a href="http://www.lagou.com/jobs/positionAjax.json?这一段是固定的，剩下的我们发现上面有个北京" target="_blank" rel="external">http://www.lagou.com/jobs/positionAjax.json?这一段是固定的，剩下的我们发现上面有个北京</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238874804.png" alt=""></p>
+<p>我们把这里改成上海看看，可以看见又出来一个网页内容，刚好和之前网页把工作地改成上海，对应的内容一致</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238984889.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238953420.png" alt=""></p>
+<p>所以我们可以得出结论，这里city标签就代表着你选的工作地点，那我们要是把工作经验，学历要求，什么都选上呢？？可以直接看到，网址就变了很多</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9f8219fe63e91daa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我们直接把这些复制到刚才我们找到的网页上<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239234472.png" alt=""></p>
+<p>可以发现和网页内容一致</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239242318.png" alt=""></p>
+<p>现在我们可以下结论，我们需要的就是这个网址：<br><a href="http://www.lagou.com/jobs/positionAjax.json" target="_blank" rel="external">http://www.lagou.com/jobs/positionAjax.json</a></p>
+<p>然后后面可以加这些参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gj=应届毕业生&amp;xl=大专&amp;jd=成长型&amp;hy=移动互联网&amp;px=new&amp;city=上海</span><br></pre></td></tr></table></figure></p>
+<p>通过修改这些参数，我们就可以获取不同的职位信息。</p>
+<p><strong>注意：</strong>这里的构造还比较简单，有时候，有些网址的构造远比这个复杂，经常会出现一些你不知道什么意思的id=什么的，这个时候，可能这个id的可能值可能就在别的文件中，你可能还得找一遍，也可能就在网页源代码中的某个地方。<br>还有一种情况，可能会出现time=什么的，这就是时间戳，这时候，需要用time函数构造。总之，要具体情况具体分析。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">time.time()</span><br></pre></td></tr></table></figure></p>
+<h1 id="编写爬虫"><a href="#编写爬虫" class="headerlink" title="编写爬虫"></a><strong>编写爬虫</strong></h1><p>因为这个网页的格式是用的json，那么我们可以用json格式很好的读出内容。<br>这里我们切换成到preview下，然后点content—positionResult—result，可以发现出先一个列表，再点开就可以看到每个职位的内容。为什么要从这里看？有个好处就是知道这个json文件的层级结构，方便等下编码。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-f287121e7e4fa46e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>整个处理的代码就那么几句话，可以可出，这里完全和刚才的层级结构是一致的。先content然后result然后是每个职位的信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jdict = json.loads(response.body)</span><br><span class="line">jcontent = jdict[&quot;content&quot;]</span><br><span class="line">jposresult = jcontent[&quot;positionResult&quot;]</span><br><span class="line">jresult = jposresult[&quot;result&quot;]</span><br><span class="line">for each in jresult:</span><br><span class="line">    print each[&apos;city&apos;]</span><br><span class="line">    print each[&apos;companyName&apos;]</span><br><span class="line">    print each[&apos;companySize&apos;]</span><br><span class="line">    print each[&apos;positionName&apos;]</span><br><span class="line">    print each[&apos;positionType&apos;]</span><br><span class="line">    print each[&apos;salary&apos;]</span><br><span class="line">    print &apos;&apos;</span><br></pre></td></tr></table></figure></p>
+<p>当然还是要引入json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242738460.png" alt=""></p>
+<p>我们可以运行看看效果</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242703391.png" alt=""></p>
+<p>然后，我们可以把信息存到文件或者数据库了，那就是之前学过的内容了。</p>
+<h2 id="修改items-py"><a href="#修改items-py" class="headerlink" title="修改items.py"></a><strong>修改items.py</strong></h2><p>加入你需要的内容</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461243136118.png" alt=""></p>
+<h2 id="修改settings-py"><a href="#修改settings-py" class="headerlink" title="修改settings.py"></a><strong>修改settings.py</strong></h2><p>看你是需要存入数据库还是文件，之前都说过了</p>
+<h2 id="修改pipelines-py"><a href="#修改pipelines-py" class="headerlink" title="修改pipelines.py"></a><strong>修改pipelines.py</strong></h2><p>如果需要加入数据库，这里加上数据库操作，如果需要写入文件，可能不用修改这个文件</p>
+<h2 id="修改parse"><a href="#修改parse" class="headerlink" title="修改parse()"></a><strong>修改parse()</strong></h2><p>把数据加入item，然后yield，大家应该很熟悉了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9487ad42ea32a704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def parse(self, response):</span><br><span class="line">    item = LagouItem()</span><br><span class="line">    jdict = json.loads(response.body)</span><br><span class="line">    jcontent = jdict[&quot;content&quot;]</span><br><span class="line">    jposresult = jcontent[&quot;positionResult&quot;]</span><br><span class="line">    jresult = jposresult[&quot;result&quot;]</span><br><span class="line">    for each in jresult:</span><br><span class="line">        item[&apos;city&apos;]=each[&apos;city&apos;]</span><br><span class="line">        item[&apos;companyName&apos;] = each[&apos;companyName&apos;]</span><br><span class="line">        item[&apos;companySize&apos;] = each[&apos;companySize&apos;]</span><br><span class="line">        item[&apos;positionName&apos;] = each[&apos;positionName&apos;]</span><br><span class="line">        item[&apos;positionType&apos;] = each[&apos;positionType&apos;]</span><br><span class="line">        item[&apos;positionAdvantage&apos;] = each[&apos;positionAdvantage&apos;]</span><br><span class="line">        item[&apos;companyLabelList&apos;] = each[&apos;companyLabelList&apos;]</span><br><span class="line">        item[&apos;salary&apos;] = each[&apos;salary&apos;]</span><br><span class="line">        yield item</span><br></pre></td></tr></table></figure>
+<p>最后效果差不多是这样的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-05a89a011204eb67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>但是，这里还只爬了一个网页的内容，对于更多页面的内容，怎么获取呢？我在下篇博客会有介绍，有兴趣的童鞋可以自己试试看如果获取下一页的内容，用上面教的查找资源的办法。</p>
+<p><a href="http://www.jianshu.com/p/982dd9a368dd" target="_blank" rel="external">【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）]]></title>
+      <url>http://voidsky.top/2016/05/10/%E3%80%90%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3%E3%80%91scrapy%E7%88%AC%E8%99%AB%E4%B8%8EAjax%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2%E2%80%94%E2%80%94%E7%88%AC%E5%8F%96%E6%8B%89%E5%8B%BE%E7%BD%91%E8%81%8C%E4%BD%8D%E4%BF%A1%E6%81%AF%EF%BC%882%EF%BC%89/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>上次挖了一个坑，今天终于填上了，还记得之前我们做的拉勾爬虫吗？那时我们实现了一页的爬取，今天让我们再接再厉，实现多页爬取，顺便实现职位和公司的关键词搜索功能。</p>
+</blockquote>
+<p>之前的内容就不再介绍了，不熟悉的请一定要去看之前的文章，代码是在之前的基础上修改的</p>
+<a id="more"></a>
+<!--more-->
+<p><a href="http://www.jianshu.com/p/f030cba076a2" target="_blank" rel="external">【图文详解】scrapy爬虫与动态页面——爬取拉勾网职位信息（1）</a></p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a><strong>开始</strong></h1><p>还是回到我们熟悉的页面，这里，我们熟练的打开了Newwork标签，我们点下一页，看会出来什么结果<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463152528112.png)</p>
+<p>果然还是跳出来一个页面，但是貌似。。网址一样，我打开看一下</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463152929961.png)</p>
+<p>和之前不一样也！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463152921303.png)</p>
+<p>一样的网址，结果不一样的结果，这怎么可能！！小伙伴是不是也和我一样，一脸懵B!</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463153132325.png)</p>
+<p>别急，我们继续看看别的信息<br>在preview我们看到了Pageno.2 说明确实不是同样的内容</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463153168981.png)</p>
+<h1 id="看看Header"><a href="#看看Header" class="headerlink" title="看看Header"></a><strong>看看Header</strong></h1><p>我们继续看header，貌似发现了不起的东西。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463153261036.png)</p>
+<p>这个pn不就是pageno的简写吗？（什么，你怎么不知道有这个缩写？）我们可以再打开一个网页看看，事实证明，我是对的。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463153537222.png)</p>
+<p>好的，我们现在知道页码信息在这里了，那要怎么把这个信息附加上呢？？</p>
+<h1 id="Get-or-Post"><a href="#Get-or-Post" class="headerlink" title="Get or Post??"></a><strong>Get or Post??</strong></h1><p>我们知道网页有两种方式传输数据，get和post，get是把需要传输的数据写到URL上，用户可以直观看见，就是我们之前一直使用的（比如搜索城市，工作经验，学历什么的）。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。</p>
+<h1 id="scrapy实现post"><a href="#scrapy实现post" class="headerlink" title="scrapy实现post"></a><strong>scrapy实现post</strong></h1><p>看来我们得想办法用scrapy实现post了。<br>如果你还记得我们之前讲request的时候讲了request是可以轻松实现post的，那scrapy有request吗？毫无疑问是有的。我们在文档中找到了一个叫<code>FormRequest</code>的对象，它能实现post功能，并给出了例子<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463154957391.png)</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463155174463.png)</p>
+<p>我们在我们的之前代码中的class中加入一个<code>start_requests</code>函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def start_requests(self):</span><br><span class="line">        return [scrapy.http.FormRequest(&apos;http://www.lagou.com/jobs/positionAjax.json?px=new&amp;city=%E5%8C%97%E4%BA%AC&apos;,</span><br><span class="line">                                        formdata=&#123;&apos;pn&apos;:&apos;2&apos;&#125;,callback=self.parse)]</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463155613437.png)</p>
+<p>运行一下，出错了，才发现，原来目前拉勾的json结构改了，中间加了一个<code>positionResult</code></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463156012296.png)</p>
+<p>修改代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jcontent = jdict[&quot;content&quot;]</span><br><span class="line">jposresult = jcontent[&quot;positionResult&quot;]</span><br><span class="line">jresult = jposresult[&quot;result&quot;]</span><br></pre></td></tr></table></figure></p>
+<p>再运行一下，和第2页的一致，说明成功了<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463156134916.png)</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463156215813.png)</p>
+<p>这里再说下，如果你在关键词里搜索，你会发现链接也不会变化，说明什么？？说明也是用的post，比如我搜索大数据，可以看到<code>kd</code>变成了大数据，所以我们也可以构造特定关键词的爬虫了。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463157500842.png)</p>
+<h1 id="实现自动翻页"><a href="#实现自动翻页" class="headerlink" title="实现自动翻页"></a><strong>实现自动翻页</strong></h1><p>我们只要能控制pn就行了，我们新增一个变量<code>curpage</code>让它运行一次自加1，然后我们还是用之前的yield的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if self.curpage &lt;= self.totalPageCount:</span><br><span class="line">	self.curpage += 1</span><br><span class="line">yield scrapy.http.FormRequest(&apos;http://www.lagou.com/jobs/positionAjax.json?px=new&amp;city=%E5%8C%97%E4%BA%AC&apos;,                                        formdata=&#123;&apos;pn&apos;:str(self.curpage)&#125;,callback=self.parse)</span><br></pre></td></tr></table></figure></p>
+<p>要说明的是，之前json文件里是有个<code>totalPageCount</code>属性的，目前没了！所以不能直接从json文件中获取页数信息了，怎么办呢？如果你要细心观察就可以发现有个<code>totalCount</code>属性，你做实验可以发现，每页都是15个，页数就是totalCount/15取整，如果页数大于30，只显示30页。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463157303949.png)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">self.totalPageCount = jposresult[&apos;totalCount&apos;] /15;</span><br><span class="line">      if  self.totalPageCount &gt; 30:</span><br><span class="line">          self.totalPageCount = 30;</span><br></pre></td></tr></table></figure>
+<p>这里我们爬所有北京有关“大数据”的工作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">formdata=&#123;&apos;pn&apos;:str(self.curpage),&apos;kd&apos;:&apos;大数据&apos;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>好了大工告成！享受你的成果吧！！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取(2" alt="">/1463157993670.png)</p>
+<p>这个工程我上传到了github，有兴趣的同学可以下载下来看看：<br><a href="https://github.com/hk029/LagouSpider" target="_blank" rel="external">https://github.com/hk029/LagouSpider</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[你的方向值多少钱？从拉勾网数据看目前【IT市场行情】]]></title>
+      <url>http://voidsky.top/2016/05/10/%E4%BD%A0%E7%9A%84%E6%96%B9%E5%90%91%E5%80%BC%E5%A4%9A%E5%B0%91%E9%92%B1%EF%BC%9F%E4%BB%8E%E6%8B%89%E5%8B%BE%E7%BD%91%E6%95%B0%E6%8D%AE%E7%9C%8B%E7%9B%AE%E5%89%8D%E3%80%90IT%E5%B8%82%E5%9C%BA%E8%A1%8C%E6%83%85%E3%80%91/</url>
+      <content type="html"><![CDATA[<h1 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h1><a id="more"></a>
+<p>之前一直说要分析拉勾网的数据就去学了爬虫，学习爬虫的过程还是很有意思的，写了很多小玩意也遇到很多问题，把学习过程记录在博客里，还意外还赚了点点击量。（貌似有点跑题了，好了，我们回来）今天终于可以把分析报告写出来了。</p>
+<!--more-->
+<h1 id="拉勾网数据说明"><a href="#拉勾网数据说明" class="headerlink" title="拉勾网数据说明"></a>拉勾网数据说明</h1><p>拉勾网的数据麻烦在是动态加载的，加上对显示数据有很强的限制，所以不可能爬下来完整的数据。（最近拉勾网是一次搜索最多显示30页，每页15条，这加起来一次搜索也就500条信息不到，但是通过查看网络请求，可以发现，拉勾网一次搜索提供的数据是5000多条。）<br>所以我是通过多关键次多次爬取。采用的是拉勾首页提供的关键词，加上自己的添加。关键词列表如下（技术岗）：<br><img src="./1463292485128.png" alt="Alt text"></p>
+<h2 id="数据量"><a href="#数据量" class="headerlink" title="数据量"></a>数据量</h2><p>总共数据量一共4w多条。分析直接采用的现成的统计工具（数说立方）生成结果，还挺方便。</p>
+<h2 id="工资处理"><a href="#工资处理" class="headerlink" title="工资处理"></a>工资处理</h2><p>由于拉勾网的工资数据是采用的工资范围的显示方式：<code>20k-50k</code><br>所以我记录了<code>最小值</code>和<code>最大值</code>，<code>平均值</code>直接采用<code>最小值</code>和<code>最大值</code>的平均（当然这肯定不准确，但是也有一定的参考意义）</p>
+<h1 id="分析报告"><a href="#分析报告" class="headerlink" title="分析报告"></a>分析报告</h1><p>好了，我知道大部分人只关注这一部分：</p>
+<h2 id="岗位情况"><a href="#岗位情况" class="headerlink" title="岗位情况"></a>岗位情况</h2><h3 id="总体岗位需求"><a href="#总体岗位需求" class="headerlink" title="总体岗位需求"></a>总体岗位需求</h3><p>我列出了前20位的岗位需求，先看图：<br><img src="./1463291633305.png" alt="Alt text"></p>
+<p>明显需求最大的还是<code>java</code>，<code>PHP</code>，<code>Android</code> 3者均爆表（&gt;=5000），<code>.Net</code>，<code>iOS</code>紧跟其后。<code>Pytho</code>n的寻求和<code>c#</code>差不多，还高一点。<code>大数据</code>和<code>数据挖掘</code>这两个关键词的职位目前需求也很旺盛，这和目前大家的预期都还是挺一致的。</p>
+<p>这里发现前两年火的<code>云计算</code>需求没那么旺盛，哪怕加上<code>Hadoop</code>都没破千（理论上都不能用加），这点还是挺出乎我意料外</p>
+<p>的。<code>Node.js</code>我觉得目前需求小了点，但是我还是对其保持乐观的看法。</p>
+<p><code>html5</code>目前需要也比较旺盛，前景还是很乐观的嘛。</p>
+<p>这里有意思的是C在C++前面，然后我看了看C的都是什么职位，然后我就懂了，也很好理解，搜C关键词肯定会把C++带上。目前招C大部分是C/C++一起招的，纯C的还是少。<br><img src="./1463293234267.png" alt="Alt text"></p>
+<h3 id="岗位平均工资"><a href="#岗位平均工资" class="headerlink" title="岗位平均工资"></a>岗位平均工资</h3><p>我们看看前20的岗位工资情况：<br><img src="./1463293722862.png" alt="Alt text"><br>这里基本和需求调了个，工资最高的是<code>推荐</code>，<code>机器学习</code>,<code>搜索</code>,<code>自然语言处理</code>,<code>docker</code>,<code>大数据类</code>，<code>语音识别</code>，这个很符合目前市场的预期，在大数据，机器学习还有人工智能的大背景下，推荐，搜索，还有自然语言处理借势自然会火一把。（相关专业的同学请吃饭好不好？？）</p>
+<p>这里值得注意的是中间件火了。我记得刚听到这个词还是大四的时候，听国外大学教授介绍docker，他说：“国外这个已经非常火了，中国总是落后国外几年，今后这个会火的。”</p>
+<p>我当时还不信，我现在信了。虽然岗位需求还没上来，但是，工资已经先上来了。</p>
+<h3 id="工资平均最大值"><a href="#工资平均最大值" class="headerlink" title="工资平均最大值"></a>工资平均最大值</h3><p>最大值的平均值平均要提高5k左右，最高的还是那几个。<br><img src="./1463294232166.png" alt="Alt text"></p>
+<h3 id="语言类需求"><a href="#语言类需求" class="headerlink" title="语言类需求"></a>语言类需求</h3><p>没太多出乎意料的地方<br><img src="./1463296621011.png" alt="Alt text"></p>
+<h3 id="语言类平均工资"><a href="#语言类平均工资" class="headerlink" title="语言类平均工资"></a>语言类平均工资</h3><p><img src="./1463298136538.png" alt="Alt text"><br><code>Go</code>，<code>python</code>，<code>ruby</code>三大脚本语言领先。<code>js</code>超过了<code>java</code>,虽然考虑需求量依然是java需求量大，但是脚本语言前途还是挺光明的，至少目前的趋势下，你得至少会一门脚本语言。</p>
+<h3 id="非语言类需求"><a href="#非语言类需求" class="headerlink" title="非语言类需求"></a>非语言类需求</h3><p>依旧是数据类占大头<br><img src="./1463296906641.png" alt="Alt text"></p>
+<h2 id="城市报告"><a href="#城市报告" class="headerlink" title="城市报告"></a>城市报告</h2><h3 id="城市岗位需求"><a href="#城市岗位需求" class="headerlink" title="城市岗位需求"></a>城市岗位需求</h3><p>不出意外”北上广深杭” 依然占据前5，不过我没想到北京会拉别的城市那么多。还有，技术岗需求中<code>杭州</code>超过<code>广州</code>了也。（当然这个数据毕竟不是完整的数据）<br><img src="./1463294453417.png" alt="Alt text"></p>
+<h3 id="城市工资情况"><a href="#城市工资情况" class="headerlink" title="城市工资情况"></a>城市工资情况</h3><p>工资前几名还是<code>北京</code>，<code>上海</code>，<code>深圳</code>，<code>香港</code>,<code>杭州</code>明显高于其他城市。广州在平均工资这里偏低了。<br><img src="./1463297481553.png" alt="Alt text"></p>
+<h3 id="城市工资最大值平均情况"><a href="#城市工资最大值平均情况" class="headerlink" title="城市工资最大值平均情况"></a>城市工资最大值平均情况</h3><p>工资前几名还是<code>北京</code>，<code>上海</code>，<code>深圳</code>，<code>杭州</code>，<code>香港</code>,这里<code>杭州</code>大于<code>香港</code>了，但是整体差不多。也是明显高于其他城市。<br>（注意这里都是平均情况，要说最高的，我还见过有50k,100k的呢）<br><img src="./1463297644426.png" alt="Alt text"></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="公司规模与工资情况"><a href="#公司规模与工资情况" class="headerlink" title="公司规模与工资情况"></a>公司规模与工资情况</h3><p><img src="./1463298630578.png" alt="Alt text"></p>
+<p>还是工资跟公司规模成正比，这点貌似还是没错</p>
+<h3 id="招聘岗位词云"><a href="#招聘岗位词云" class="headerlink" title="招聘岗位词云"></a>招聘岗位词云</h3><p><img src="./1463298726359.png" alt="Alt text"></p>
+<h3 id="公司最喜欢贴的标签"><a href="#公司最喜欢贴的标签" class="headerlink" title="公司最喜欢贴的标签"></a>公司最喜欢贴的标签</h3><p><img src="./1463298807211.png" alt="Alt text"></p>
+<p><code>双薪</code>，<code>年假</code>。。。我竟然还在旁边看见一个<code>美女</code>。</p>
+<p>怎么看着那么不靠谱呢？有句话怎么说来着？得不到的永远在骚动？所以公司就用这些标签去吸引人才了，反正我是不信互联网公司有那么多假。。。</p>
+<h3 id="公司优势"><a href="#公司优势" class="headerlink" title="公司优势"></a>公司优势</h3><p><img src="./1463298965227.png" alt="Alt text"></p>
+<p>参考上面。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h3 id="还是大数据"><a href="#还是大数据" class="headerlink" title="还是大数据"></a>还是大数据</h3><p><img src="./1463299709772.png" alt="Alt text"><br>通过上面很粗略的分析，可以看出来，目前市场需求最大并且工资最高的都还是有关大数据类的工作。所以小伙伴你们懂的。</p>
+<h3 id="脚本语言"><a href="#脚本语言" class="headerlink" title="脚本语言"></a>脚本语言</h3><p><img src="./1463300165819.png" alt="Alt text"></p>
+<p> 在语言方面，脚本语言越来越火了，如果你会相对小众的脚本语言go，ruby（注意我这里用了相对小众，拥护者别打我），估计以后找个高薪的机会应该不难（前提是精通），不过小众的脚本语言在中国的学习资料不算多，交流也相对麻烦点。<br> <img src="./1463300116567.png" alt="Alt text"><br> PS. go语言真的不打算换吉祥物了???</p>
+<h3 id="大前端"><a href="#大前端" class="headerlink" title="大前端"></a>大前端</h3><p>我觉得现在的前端应该和以前只会切图的前端web区分开了，随着js的重要性继续增强，google v8引擎的推出。以后应用可能会往web倾斜，目前也有web app转本地APP的方案了，以后应该能做到一次编写，跨平台运行。是不是有可能开启一个大航海（大前端）时代呢（个人看法，轻喷）<br><img src="./1463296859625.png" alt="Alt text"></p>
+<p>除此之外，<code>html5</code>现在招聘信息也挺多的了。是不是意味着中国大前端的春天要来了？</p>
+<p><img src="./1463296820935.png" alt="Alt text"></p>
+<p>加上<code>Node.js</code>一出，我感觉<code>全栈</code>的概念又得火</p>
+<h1 id="声明："><a href="#声明：" class="headerlink" title="声明："></a>声明：</h1><p>（我觉得还是得加个声明，不然估计会有人找我麻烦的）</p>
+<p>以上信息均是个人根据兴趣分析结果，不代表任何机构的立场。<br>由于不是大数据的结果，可能会有不准确的地方，大家仅供参考。</p>
+<p>最后，对拉勾公司提供的信息表示感谢，没封我的ip。（虽然不是主动提供的）这还是个好公司，给程序猿们提供了很多有关就业有用的信息。</p>
+<blockquote>
+<p>以上爬取内容仅供学习交流使用，禁止用于商业行为。</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[每个人都该学git，最新GitHub与Git指令快速上手]]></title>
+      <url>http://voidsky.top/2016/05/10/%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E8%AF%A5%E5%AD%A6git%EF%BC%8C%E6%9C%80%E6%96%B0GitHub%E4%B8%8EGit%E6%8C%87%E4%BB%A4%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/</url>
+      <content type="html"><![CDATA[<h1 id="2016-5-17更新"><a href="#2016-5-17更新" class="headerlink" title="2016/5/17更新"></a>2016/5/17更新</h1><a id="more"></a>
+<p>github这个磨人的小妖精，又更新了页面布局，我下面的文章又得改了，以下内容更新到当前时间。</p>
+<!--more-->
+<h1 id="为什么要学github"><a href="#为什么要学github" class="headerlink" title="为什么要学github"></a>为什么要学github</h1><ul>
+<li>如果你想要快速建立自己博客，学git。</li>
+<li>如果你是程序猿，请务必学git，并习惯把自己的代码同步到github上（你想说，不嘛，我自己的代码，不想给别人看。喂喂！有点开源精神好不好）。</li>
+<li>如果你是文案工作者，你得到处跑，在不同的电脑上同步文章，学git（涉秘内容你可以选择私有仓库）。</li>
+<li>如果你要在不同平台上发文章，觉得图片同步是个麻烦事，学git。<br>……<br>只要你有任何同步的需求（太大的内容除外），学git真没错。</li>
+</ul>
+<h1 id="什么是git"><a href="#什么是git" class="headerlink" title="什么是git"></a>什么是git</h1><p><em>Git</em>是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
+<p>Git 不等于 github大家注意了！git和github就是球和球场的关系！</p>
+<p>github是一个平台网站，建立在git之上的。国内外还有很多这样的代码托管平台比如bitbucket（我之前一直在这上面弄，有免费的私有仓库）。</p>
+<p>github的优势在与用户群大，而且十分活跃，能在上面找到很多好玩的东西，加上上面建站方便（以后再写）。反正，如果你在找一个托管平台，选github没错！</p>
+<h1 id="创建账户"><a href="#创建账户" class="headerlink" title="创建账户"></a><strong>创建账户</strong></h1><p>之前做代码版本控制都是在bitbucket上面的私有仓库。现在开源社区挺火的，想在github找些开源的工程学习一下，于是加入了github，这里记录一下入门的经历。</p>
+<p>首先创建账户的过程在这里就省略一万字了…</p>
+<p><a href="www.github.com">点这里进github官网</a></p>
+<p>创建完账户，你就可以开始建立自己的第一个仓库了。你会在你奇奇怪怪的默认头像旁边看见一个很大的“+”号，点下去，可以看到2个选项，第一个就是新建个代码仓库。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-3111843f4836e0c6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>填好仓库名，然后点上创建一个README，最好也填点说明。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-8b0ac1fe6f4f6e17?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后你就能看到下面的界面了，现在里面只有一个ReadMe，注意红框的位置，这就是你的仓库地址，如果要克隆仓库，就是这个地址。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9e85ea021e304192.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>接下来就可以添加你的工程文件了，你可以用网站上的功能按钮新建文件或者上传文件，但是推荐还是在本地用命令行操作。</p>
+<h1 id="本地操作方案"><a href="#本地操作方案" class="headerlink" title="本地操作方案"></a>本地操作方案</h1><p>那本地怎么操作呢？有2个方案：</p>
+<p>1.直接下载github的桌面程序，是可视化的，很容易上手。<br><a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9e05fb6c3a7afce3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>2.使用命令行，这里【推荐】使用命令行，一来效率高，二来以后你到不同的平台上，能很快的上手，再者如果你以后用的服务器没有图形界面，只能用命令行。所以还是熟悉的好。</p>
+<p>首先你需要安装git</p>
+<h1 id="Linux上安装Git"><a href="#Linux上安装Git" class="headerlink" title="Linux上安装Git"></a><strong>Linux上安装Git</strong></h1><p>红帽系列</p>
+<pre><code>$ sudo yum install git
+</code></pre><p>Ubuntu系，请尝试用 apt-get：</p>
+<pre><code>$ sudo apt-get install git
+</code></pre><h1 id="Mac上安装Git"><a href="#Mac上安装Git" class="headerlink" title="Mac上安装Git"></a><strong>Mac上安装Git</strong></h1><p>在 Mac 上安装 Git 有多种方式。 最简单的方法是安装 Xcode Command Line Tools。 Mavericks （10.9） 或更高版本的系统中，在 Terminal 里尝试首次运行 git 命令即可。 如果没有安装过命令行开发者工具，将会提示你安装。</p>
+<p>如果你想安装更新的版本，可以使用二进制安装程序。 官方维护的 OSX Git 安装程序可以在 Git 官方网站下载，网址为 <a href="http://git-scm.com/download/mac。" target="_blank" rel="external">http://git-scm.com/download/mac。</a></p>
+<h1 id="Windows上安装Git"><a href="#Windows上安装Git" class="headerlink" title="Windows上安装Git"></a><strong>Windows上安装Git</strong></h1><p>windows用户用2个选择：</p>
+<ol>
+<li>如果命令已经熟悉的建议用msysGit可以去官网下载：<br><a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a> </li>
+<li>如果安装了github桌面版，自动会有个git shell （我在这里展示用的这个，比较好看，方便介绍命令。<strong>但是后续使用，我基本只用git bash，虽然丑点，但是方便啊，直接到仓库对应目录下点击右键就可以打开bash</strong>）<br><a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
+</ol>
+<p>安装就一路下一步就好了。由于我是windows环境，这里重点就讲windows上git的使用，不过命令都是通用的。（<strong>不管你用什么git工具，在命令行下的命令基本是一致的，所以不需要特别跟我用一样的git工具</strong>）</p>
+<h1 id="Windows上git使用"><a href="#Windows上git使用" class="headerlink" title="Windows上git使用"></a><strong>Windows上git使用</strong></h1><p>安装完msysgit后，会有Git Bash的图标，安装完github桌面版会有个git shell，不管哪个都一样的。我这里用的git shell，比较友好（但是命令都是通用的）。Git shell里面，windows和linux的常用命令都可以用！是不是很赞。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b559620c6ff3ad7a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>打开后是一个控制台，然后就可以输入命令了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-fa6b0ee46a362f97?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>一开始什么都不会的时候，可以使用</p>
+<pre><code>git help
+</code></pre><p>查看可用命令。下面先记录一些刚开始可能会用到的命令，剩下的命令以后再记录。</p>
+<h1 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a><strong>Git常用命令</strong></h1><p>一般人，如果不是做协同开发，真的只要知道这些命令就好了！<strong>如果懒癌发作连这些命令也不想看，直接跳到最后！！立马上手！！</strong></p>
+<h2 id="获取仓库"><a href="#获取仓库" class="headerlink" title="获取仓库"></a><strong>获取仓库</strong></h2><p>可以用</p>
+<pre><code>git init
+</code></pre><p>初始化一个仓库，这个一般在什么时候用呢？一般就是你本地目录已经准备就绪了，然后想直接在github上新建一个“空”仓库（连README.d也不要）把东西全丢进去的时候用这个。这个命令一般和<code>remote</code>命令配合使用，效果更佳。（下面会介绍别急哦）</p>
+<pre><code>git remote add
+</code></pre><p>我们一般常用的都是克隆现有的仓库，这里还是用刚才创建的helloworld仓库（<strong>这里我用https地址，但是推荐大家使用ssh，ssh使用方法后面也会提，大家少安毋躁</strong>）</p>
+<pre><code>git clone https://github.com/hk029/hello-world.git
+</code></pre><p>url后面可以用一个新的路径名<code>https://github.com/username/reponame.git</code>，让它保存到特定的目录下，默认就是当前路径下创建一个和仓库名一样的目录。</p>
+<p><strong>注意</strong>：这个命令是克隆了一个仓库而不是简单的拷贝了文件下来，还保存了有关仓库的信息，基本就是克隆出了一个小的本地仓库。(有个.git目录)</p>
+<p>然后可以cd进去看看</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-91c336c4634dc77c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里有个比较有意思的地方，你会发现目录名后一个<code>[master]</code>这个表示目前这是一个master分支。当前目录有个<code>.git</code>目录，它会记录仓库的信息，所以你能看到<code>[master]</code>这个标签。之后你对当前目录的文件做的操作，都会被记录。</p>
+<p>如果你是用的git bash，也能看到后面有个小括号写的<code>master</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-0a6f56e5bce03816.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="状态与暂存"><a href="#状态与暂存" class="headerlink" title="状态与暂存"></a><strong>状态与暂存</strong></h2><p>检查目前仓库的状态是挺重要的一个环节，以免你提交代码的时候提交的不是最新代码。<br>一般来说，你目前目录下的文件就两种状态</p>
+<ul>
+<li>跟踪</li>
+<li>未跟踪</li>
+</ul>
+<p>我们可以先输入命令看看当前仓库的状态</p>
+<pre><code>git status
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-fac51127a4fba989?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>可以发现目前目录下很干净，一切都和当初克隆下来一样，所以状态显示也是很干净。</p>
+<p>我们新键一个文件，或者从别的地方移动一个文件到当前目录下，看看有什么变化。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-745be77760ddc8c2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我们可以看见，‘[master]’之后多了几个东西。</p>
+<blockquote>
+<p>+1 表示目前有1个新文件<br>~0 表示0个修改的文件<br>-0 表示0个删除的文件<br>! 表示未保存</p>
+</blockquote>
+<p>我们再输入status命令看看</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-70a3529538a925e4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>发现目前有个未跟踪的文件了。</p>
+<p>我们把它暂存到暂存区</p>
+<pre><code>git add NewFile
+</code></pre><p>这个命令会把这个文件放到暂存区（还是在本地）到时候提交的时候就会把暂存区的东西提交到网上。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b81c79eaa5fa0183?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这个时候，我们发现红色的字变成了绿色，感叹号也没有了，说明目前修改都已经保存了。</p>
+<p>再输入satus命令看看<br><img src="http://upload-images.jianshu.io/upload_images/1031810-ce8ae0192edf01f8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这个时候已经是跟踪状态了。</p>
+<p>如果我们这时候修改NewFile会发生什么呢？</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-16377b03060ba791?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>可以发现，又变红了，这时候出先了~1,说明有一个修改文件。使用status命令看看</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-50a064498e252181?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>果然，出现了一个NewFile在未跟踪里面。这不是很奇怪吗，一个文件既是跟踪又是未跟踪？其实这很好理解，你可以理解为暂存区还有一个NewFile拷贝，就是原来那个我们add的<strong>“空”</strong>的NewFile。修改的这个不在暂存区，如果这时候我们把所有修改提交，那么提交的是<strong>“空”</strong>的NewFile。 </p>
+<p><strong>所以当我们提交前，一定要<code>git status</code>看是不是还有红字？是不是还有什么修改没有更新到暂存区！</strong></p>
+<p>最后，还说下，其实git status有个简化输出的形式。</p>
+<pre><code>git status -s
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-a27eda5b2606bfce?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里我为了让所有状态都出现，删除了README.md，可以发现这个简化版输出其实更直观。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9106e1062f6ea4f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我们把所有的修改更新到暂存区吧：</p>
+<pre><code>git add NewFile
+git rm README.md
+</code></pre><p>现在所有的更新都更新到暂存区了，可以提交了！</p>
+<h2 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a><strong>提交到本地仓库</strong></h2><p>这里的commit只是保存到了本地。如果你只需要一个本地仓库，那么现在也就够了。</p>
+<pre><code>git commit -m &quot;my first commit&quot;
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-253cb802a03b851c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>注意：</strong>一定要带-m加上说明</p>
+<p>推送到远程仓库</p>
+<p>因为你是直接从远程仓库拷贝的，所以你输入</p>
+<pre><code>git remote
+</code></pre><p>会发现已经有个orignal了<br>这个时候你直接git push就行了</p>
+<pre><code>git push
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-be252d44b42ed086?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b130a57708920493?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="用SSH连接并推送到远程仓库"><a href="#用SSH连接并推送到远程仓库" class="headerlink" title="用SSH连接并推送到远程仓库"></a><strong>用SSH连接并推送到远程仓库</strong></h2><p><strong>如果大家是在自己的电脑上，墙裂建立大家使用这种模式！！</strong></p>
+<p>下面说下ssh的模式怎么用，首先你要创建一个私钥，就是在自己电脑里的钥匙。</p>
+<pre><code>ssh-keygen -t rsa -C &quot;your email addr&quot;
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-6dd89424aef2b11c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>第一个是问你改不改目录，回车就好。然后输入密码，确认（这个密码是生成这个密钥的密码，<strong>也可以为空</strong>（为空有多方便以后你就知道了），这样你下次push就不用输入密码了)。</p>
+<p>然后你就可以去那个目录下找id_rsa.pub文件，打开（随便用什么打开），把里面的东西复制。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-3a9725643aa75ddf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后去网站上把自己私钥输入进去，头像——settings</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-6bb6d922fd82cddf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>根据图片点New SSH key</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-cf51ed6892f0fd03?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后输入一个随便什么title自己知道就好，和你刚才复制的东西在key里</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-5be4defaabb818c3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这时候，就算在github上注册了你的私钥，然后在输入</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>看看是不是能ssh连上github</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-eb652f53c401059d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>好了一切准备就绪。<br>我们先把远程仓库加上：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-f5648f8c60c2bddc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>选择ssh，然后复制后面的地址。</p>
+<p>（因为之前有一个original的，我们这里方便测试先删了它）</p>
+<pre><code>git remote rm origin
+</code></pre><p>输入</p>
+<pre><code>git remote 
+</code></pre><p>发现没东西了，可以添加新的远程仓库了。（如果你是<code>init</code>创建的仓库，就要用下面的命令添加远程仓库啦！）</p>
+<pre><code>git remote add origin git@github.com:hk029/hello-world.git
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-91b671e09a25226e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>然后输入</p>
+<pre><code>git push -u origin master
+</code></pre><p>master是你的分支，origin是你的远程仓库</p>
+<p>第一次<code>git push -u origin master</code>后，就可以用直接用git push指令了</p>
+<hr>
+<h1 id="One-more-things"><a href="#One-more-things" class="headerlink" title="One more things"></a>One more things</h1><p>现在，走完整个流程，你应该大概对git有一个认识了，熟练的掌握git命令能成倍提升你的工作效率（特别是如果你经常要在多台电脑上工作，同步数据）。</p>
+<p>这里最后说一下，如果你不想记忆那么多命令（至少把这上面的那个ssh配置看一下），那么请至少记住以下5条：<br>首先是</p>
+<pre><code>git clone ……
+</code></pre><p>不管什么情况，你都可以先用git clone 把仓库弄下来，然后再把文件复制进去。然后！就是下面的我称为无脑四重奏的命令。</p>
+<ul>
+<li>如果你有更新了该怎么办？？记住下面的四条命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">git add * /rm</span><br><span class="line">git commit -m &quot;add&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以后你在不同地方同步自己的更新，无脑敲4条命令就好了。（前提是你本地有仓库了呀！）</p>
+<p>你可以把这4条命令写在.bat文件里（就是新建一个文件，把4条命令输进去，后缀改成.bat，linux就.sh）</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-1325103ab84f8dda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里我放在d盘"><br>然后每次只用输入1条命令就好了！</p>
+<pre><code>d:/gitpush.bat
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-b1932f97e11a617c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="遇到问题怎么办"><a href="#遇到问题怎么办" class="headerlink" title="遇到问题怎么办"></a>遇到问题怎么办</h1><p>对于小白来说，如果遇到了问题怎么办？？这里有个无敌小窍门（重启啊！）：</p>
+<ul>
+<li><p>如果你实在不知道发生了什么，你又确定你自己的本地目录是最新的。你可以把本地的.git删除，然后新建一个仓库，<code>git remote add ……</code>然后使用上面的无闹四重奏，重新push上去。</p>
+</li>
+<li><p>如果你确定网上的是最新的，你本地被你毁的面目全非了，也不要怕，把这个本地目录整个删除，重新git clone就好了。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
