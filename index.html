@@ -1,11 +1,90 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
+<!doctype html>
+
+
+
   
-  <title>VoidSky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="voidsky">
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="voidsky">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VoidSky">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -14,695 +93,1000 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VoidSky">
 <meta name="twitter:description" content="voidsky">
-  
-    <link rel="alternative" href="/atom.xml" title="VoidSky" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-      <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-  
-  
-  
-      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
-      <style> .article { opacity: 0;} </style>
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
-  
-  
-      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-  
-  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
-  <script>
-      var yiliaConfig = {
-          fancybox: true,
-          animate: true,
-          isHome: true,
-          isPost: false,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false,
-          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
-      }
-  </script>
-
-  
-      <script>
-          yiliaConfig.rootUrl = "/";
-      </script>
-  
-
-  
-  
-</head>
-<body>
-  <!--[if lt IE 9]>
-<style> body { background: orange !important;} div#container { display: none;} </style>
-<p id="ie-updater">
-    
-        IE6/7/8 aren't Supported<br>Please UPDATE your Browser!<br>
-    
-    <a href="//www.bing.com/search?q=Chrome" target="_blank">Chrome</a>, <a href="//www.bing.com/search?q=Firefox" target="_blank">Firefox</a><br>
-    Hexo Theme <a href="//github.com/MOxFIVE/hexo-theme-yelee" target="_blank">Yelee</a> by MOxFIVE
-</p>
-<![endif]-->
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Huang Kai</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">我的世界我做主</p>
-        
-                
-
-
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="/hk2291976@hotmail.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="/www.github.com/hk029" title="GitHub"></a>
-                            
-                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/30f737ee0051/" title="简书"></a>
-                            
-                                <a class="fa 博客园" target="_blank" href="http://cnblogs.com/voidsky" title="博客园"></a>
-                            
-                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/hk2291976" title="CSDN"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于新技术研究</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Huang Kai</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Huang Kai</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">我的世界我做主</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="/hk2291976@hotmail.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="/www.github.com/hk029" title="GitHub"></a>
-                            
-                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/30f737ee0051/" title="简书"></a>
-                            
-                                <a class="fa 博客园" target="_blank" href="http://cnblogs.com/voidsky" title="博客园"></a>
-                            
-                                <a class="fa CSDN" target="_blank" href="http://blog.csdn.net/hk2291976" title="CSDN"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-17" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/17/" class="article-date">
-      <time datetime="2016-05-17T06:42:16.011Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/17/">17</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>#2016/5/17更新<br>github这个磨人的小妖精，又更新了页面布局，我下面的文章又得改了，以下内容更新到当前时间。</p>
-<p>#为什么要学github</p>
-<ul>
-<li>如果你想要快速建立自己博客，学git。</li>
-<li>如果你是程序猿，请务必学git，并习惯把自己的代码同步到github上（你想说，不嘛，我自己的代码，不想给别人看。喂喂！有点开源精神好不好）。</li>
-<li>如果你是文案工作者，你得到处跑，在不同的电脑上同步文章，学git（涉秘内容你可以选择私有仓库）。</li>
-<li>如果你要在不同平台上发文章，觉得图片同步是个麻烦事，学git。<br>……<br>只要你有任何同步的需求（太大的内容除外），学git真没错。</li>
-</ul>
-<p>#什么是git<br><em>Git</em>是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
-<p>Git 不等于 github大家注意了！git和github就是球和球场的关系！</p>
-<p>github是一个平台网站，建立在git之上的。国内外还有很多这样的代码托管平台比如bitbucket（我之前一直在这上面弄，有免费的私有仓库）。</p>
-<p>github的优势在与用户群大，而且十分活跃，能在上面找到很多好玩的东西，加上上面建站方便（以后再写）。反正，如果你在找一个托管平台，选github没错！</p>
-<p>#<strong>创建账户</strong></p>
-<p>之前做代码版本控制都是在bitbucket上面的私有仓库。现在开源社区挺火的，想在github找些开源的工程学习一下，于是加入了github，这里记录一下入门的经历。</p>
-<p>首先创建账户的过程在这里就省略一万字了…</p>
-<p><a href="www.github.com">点这里进github官网</a></p>
-<p>创建完账户，你就可以开始建立自己的第一个仓库了。你会在你奇奇怪怪的默认头像旁边看见一个很大的“+”号，点下去，可以看到2个选项，第一个就是新建个代码仓库。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-3111843f4836e0c6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>填好仓库名，然后点上创建一个README，最好也填点说明。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-8b0ac1fe6f4f6e17?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>然后你就能看到下面的界面了，现在里面只有一个ReadMe，注意红框的位置，这就是你的仓库地址，如果要克隆仓库，就是这个地址。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9e85ea021e304192.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>接下来就可以添加你的工程文件了，你可以用网站上的功能按钮新建文件或者上传文件，但是推荐还是在本地用命令行操作。</p>
-<p>#本地操作方案</p>
-<p>那本地怎么操作呢？有2个方案：</p>
-<p>1.直接下载github的桌面程序，是可视化的，很容易上手。<br><a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9e05fb6c3a7afce3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>2.使用命令行，这里【推荐】使用命令行，一来效率高，二来以后你到不同的平台上，能很快的上手，再者如果你以后用的服务器没有图形界面，只能用命令行。所以还是熟悉的好。</p>
-<p>首先你需要安装git</p>
-<p>#<strong>Linux上安装Git</strong></p>
-<p>红帽系列</p>
-<pre><code>$ sudo yum install git
-</code></pre><p>Ubuntu系，请尝试用 apt-get：</p>
-<pre><code>$ sudo apt-get install git
-</code></pre><p>#<strong>Mac上安装Git</strong></p>
-<p>在 Mac 上安装 Git 有多种方式。 最简单的方法是安装 Xcode Command Line Tools。 Mavericks （10.9） 或更高版本的系统中，在 Terminal 里尝试首次运行 git 命令即可。 如果没有安装过命令行开发者工具，将会提示你安装。</p>
-<p>如果你想安装更新的版本，可以使用二进制安装程序。 官方维护的 OSX Git 安装程序可以在 Git 官方网站下载，网址为 <a href="http://git-scm.com/download/mac。" target="_blank" rel="external">http://git-scm.com/download/mac。</a></p>
-<p>#<strong>Windows上安装Git</strong></p>
-<p>windows用户用2个选择：</p>
-<ol>
-<li>如果命令已经熟悉的建议用msysGit可以去官网下载：<br><a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a> </li>
-<li>如果安装了github桌面版，自动会有个git shell （我在这里展示用的这个，比较好看，方便介绍命令。<strong>但是后续使用，我基本只用git bash，虽然丑点，但是方便啊，直接到仓库对应目录下点击右键就可以打开bash</strong>）<br><a href="https://desktop.github.com/" target="_blank" rel="external">https://desktop.github.com/</a></li>
-</ol>
-<p>安装就一路下一步就好了。由于我是windows环境，这里重点就讲windows上git的使用，不过命令都是通用的。（<strong>不管你用什么git工具，在命令行下的命令基本是一致的，所以不需要特别跟我用一样的git工具</strong>）</p>
-<p>#<strong>Windows上git使用</strong></p>
-<p>安装完msysgit后，会有Git Bash的图标，安装完github桌面版会有个git shell，不管哪个都一样的。我这里用的git shell，比较友好（但是命令都是通用的）。Git shell里面，windows和linux的常用命令都可以用！是不是很赞。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b559620c6ff3ad7a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>打开后是一个控制台，然后就可以输入命令了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-fa6b0ee46a362f97?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>一开始什么都不会的时候，可以使用</p>
-<pre><code>git help
-</code></pre><p>查看可用命令。下面先记录一些刚开始可能会用到的命令，剩下的命令以后再记录。</p>
-<p>#<strong>Git常用命令</strong></p>
-<p>一般人，如果不是做协同开发，真的只要知道这些命令就好了！<strong>如果懒癌发作连这些命令也不想看，直接跳到最后！！立马上手！！</strong></p>
-<p>##<strong>获取仓库</strong></p>
-<p>可以用</p>
-<pre><code>git init
-</code></pre><p>初始化一个仓库，这个一般在什么时候用呢？一般就是你本地目录已经准备就绪了，然后想直接在github上新建一个“空”仓库（连README.d也不要）把东西全丢进去的时候用这个。这个命令一般和<code>remote</code>命令配合使用，效果更佳。（下面会介绍别急哦）</p>
-<pre><code>git remote add
-</code></pre><p>我们一般常用的都是克隆现有的仓库，这里还是用刚才创建的helloworld仓库（<strong>这里我用https地址，但是推荐大家使用ssh，ssh使用方法后面也会提，大家少安毋躁</strong>）</p>
-<pre><code>git clone https://github.com/hk029/hello-world.git
-</code></pre><p>url后面可以用一个新的路径名<code>https://github.com/username/reponame.git</code>，让它保存到特定的目录下，默认就是当前路径下创建一个和仓库名一样的目录。</p>
-<p><strong>注意</strong>：这个命令是克隆了一个仓库而不是简单的拷贝了文件下来，还保存了有关仓库的信息，基本就是克隆出了一个小的本地仓库。(有个.git目录)</p>
-<p>然后可以cd进去看看</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-91c336c4634dc77c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这里有个比较有意思的地方，你会发现目录名后一个<code>[master]</code>这个表示目前这是一个master分支。当前目录有个<code>.git</code>目录，它会记录仓库的信息，所以你能看到<code>[master]</code>这个标签。之后你对当前目录的文件做的操作，都会被记录。</p>
-<p>如果你是用的git bash，也能看到后面有个小括号写的<code>master</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-0a6f56e5bce03816.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>##<strong>状态与暂存</strong></p>
-<p>检查目前仓库的状态是挺重要的一个环节，以免你提交代码的时候提交的不是最新代码。<br>一般来说，你目前目录下的文件就两种状态</p>
-<ul>
-<li>跟踪</li>
-<li>未跟踪</li>
-</ul>
-<p>我们可以先输入命令看看当前仓库的状态</p>
-<pre><code>git status
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-fac51127a4fba989?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>可以发现目前目录下很干净，一切都和当初克隆下来一样，所以状态显示也是很干净。</p>
-<p>我们新键一个文件，或者从别的地方移动一个文件到当前目录下，看看有什么变化。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-745be77760ddc8c2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>我们可以看见，‘[master]’之后多了几个东西。</p>
-<blockquote>
-<p>+1 表示目前有1个新文件<br>~0 表示0个修改的文件<br>-0 表示0个删除的文件<br>! 表示未保存</p>
-</blockquote>
-<p>我们再输入status命令看看</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-70a3529538a925e4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>发现目前有个未跟踪的文件了。</p>
-<p>我们把它暂存到暂存区</p>
-<pre><code>git add NewFile
-</code></pre><p>这个命令会把这个文件放到暂存区（还是在本地）到时候提交的时候就会把暂存区的东西提交到网上。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b81c79eaa5fa0183?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这个时候，我们发现红色的字变成了绿色，感叹号也没有了，说明目前修改都已经保存了。</p>
-<p>再输入satus命令看看<br><img src="http://upload-images.jianshu.io/upload_images/1031810-ce8ae0192edf01f8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这个时候已经是跟踪状态了。</p>
-<p>如果我们这时候修改NewFile会发生什么呢？</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-16377b03060ba791?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>可以发现，又变红了，这时候出先了~1,说明有一个修改文件。使用status命令看看</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-50a064498e252181?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>果然，出现了一个NewFile在未跟踪里面。这不是很奇怪吗，一个文件既是跟踪又是未跟踪？其实这很好理解，你可以理解为暂存区还有一个NewFile拷贝，就是原来那个我们add的<strong>“空”</strong>的NewFile。修改的这个不在暂存区，如果这时候我们把所有修改提交，那么提交的是<strong>“空”</strong>的NewFile。 </p>
-<p><strong>所以当我们提交前，一定要<code>git status</code>看是不是还有红字？是不是还有什么修改没有更新到暂存区！</strong></p>
-<p>最后，还说下，其实git status有个简化输出的形式。</p>
-<pre><code>git status -s
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-a27eda5b2606bfce?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这里我为了让所有状态都出现，删除了README.md，可以发现这个简化版输出其实更直观。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9106e1062f6ea4f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>我们把所有的修改更新到暂存区吧：</p>
-<pre><code>git add NewFile
-git rm README.md
-</code></pre><p>现在所有的更新都更新到暂存区了，可以提交了！</p>
-<p>##<strong>提交到本地仓库</strong></p>
-<p>这里的commit只是保存到了本地。如果你只需要一个本地仓库，那么现在也就够了。</p>
-<pre><code>git commit -m &quot;my first commit&quot;
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-253cb802a03b851c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><strong>注意：</strong>一定要带-m加上说明</p>
-<p>推送到远程仓库</p>
-<p>因为你是直接从远程仓库拷贝的，所以你输入</p>
-<pre><code>git remote
-</code></pre><p>会发现已经有个orignal了<br>这个时候你直接git push就行了</p>
-<pre><code>git push
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-be252d44b42ed086?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-b130a57708920493?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>##<strong>用SSH连接并推送到远程仓库</strong></p>
-<p><strong>如果大家是在自己的电脑上，墙裂建立大家使用这种模式！！</strong></p>
-<p>下面说下ssh的模式怎么用，首先你要创建一个私钥，就是在自己电脑里的钥匙。</p>
-<pre><code>ssh-keygen -t rsa -C &quot;your email addr&quot;
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-6dd89424aef2b11c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>第一个是问你改不改目录，回车就好。然后输入密码，确认（这个密码是生成这个密钥的密码，<strong>也可以为空</strong>（为空有多方便以后你就知道了），这样你下次push就不用输入密码了)。</p>
-<p>然后你就可以去那个目录下找id_rsa.pub文件，打开（随便用什么打开），把里面的东西复制。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-3a9725643aa75ddf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>然后去网站上把自己私钥输入进去，头像——settings</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-6bb6d922fd82cddf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>根据图片点New SSH key</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-cf51ed6892f0fd03?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>然后输入一个随便什么title自己知道就好，和你刚才复制的东西在key里</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-5be4defaabb818c3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>这时候，就算在github上注册了你的私钥，然后在输入</p>
-<pre><code>ssh -T git@github.com
-</code></pre><p>看看是不是能ssh连上github</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-eb652f53c401059d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>好了一切准备就绪。<br>我们先把远程仓库加上：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-f5648f8c60c2bddc?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>选择ssh，然后复制后面的地址。</p>
-<p>（因为之前有一个original的，我们这里方便测试先删了它）</p>
-<pre><code>git remote rm origin
-</code></pre><p>输入</p>
-<pre><code>git remote 
-</code></pre><p>发现没东西了，可以添加新的远程仓库了。（如果你是<code>init</code>创建的仓库，就要用下面的命令添加远程仓库啦！）</p>
-<pre><code>git remote add origin git@github.com:hk029/hello-world.git
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-91b671e09a25226e?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>然后输入</p>
-<pre><code>git push -u origin master
-</code></pre><p>master是你的分支，origin是你的远程仓库</p>
-<p>第一次<code>git push -u origin master</code>后，就可以用直接用git push指令了</p>
-<hr>
-<p>#One more things<br>现在，走完整个流程，你应该大概对git有一个认识了，熟练的掌握git命令能成倍提升你的工作效率（特别是如果你经常要在多台电脑上工作，同步数据）。</p>
-<p>这里最后说一下，如果你不想记忆那么多命令（至少把这上面的那个ssh配置看一下），那么请至少记住以下5条：<br>首先是</p>
-<pre><code>git clone ……
-</code></pre><p>不管什么情况，你都可以先用git clone 把仓库弄下来，然后再把文件复制进去。然后！就是下面的我称为无脑四重奏的命令。</p>
-<ul>
-<li>如果你有更新了该怎么办？？记住下面的四条命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">git add * /rm</span><br><span class="line">git commit -m &quot;add&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以后你在不同地方同步自己的更新，无脑敲4条命令就好了。（前提是你本地有仓库了呀！）</p>
-<p>你可以把这4条命令写在.bat文件里（就是新建一个文件，把4条命令输进去，后缀改成.bat，linux就.sh）</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1031810-1325103ab84f8dda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这里我放在d盘"><br>然后每次只用输入1条命令就好了！</p>
-<pre><code>d:/gitpush.bat
-</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/1031810-b1932f97e11a617c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p>#遇到问题怎么办<br>对于小白来说，如果遇到了问题怎么办？？这里有个无敌小窍门（重启啊！）：</p>
-<ul>
-<li><p>如果你实在不知道发生了什么，你又确定你自己的本地目录是最新的。你可以把本地的.git删除，然后新建一个仓库，<code>git remote add ……</code>然后使用上面的无闹四重奏，重新push上去。</p>
-</li>
-<li><p>如果你确定网上的是最新的，你本地被你毁的面目全非了，也不要怕，把这个本地目录整个删除，重新git clone就好了。</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-
-  
-    <article id="post-你的方向值多少钱？从拉勾网数据看目前【IT市场行情】" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/你的方向值多少钱？从拉勾网数据看目前【IT市场行情】/" class="article-date">
-      <time datetime="2016-05-17T06:16:44.014Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <hr>
-<h2 id="title-你的方向值多少钱？从拉勾网数据看目前【IT市场行情】"><a href="#title-你的方向值多少钱？从拉勾网数据看目前【IT市场行情】" class="headerlink" title="title:你的方向值多少钱？从拉勾网数据看目前【IT市场行情】"></a>title:你的方向值多少钱？从拉勾网数据看目前【IT市场行情】</h2><h1 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h1><p>之前一直说要分析拉勾网的数据就去学了爬虫，学习爬虫的过程还是很有意思的，写了很多小玩意也遇到很多问题，把学习过程记录在博客里，还意外还赚了点点击量。（貌似有点跑题了，好了，我们回来）今天终于可以把分析报告写出来了。</p>
-<h1 id="拉勾网数据说明"><a href="#拉勾网数据说明" class="headerlink" title="拉勾网数据说明"></a>拉勾网数据说明</h1><p>拉勾网的数据麻烦在是动态加载的，加上对显示数据有很强的限制，所以不可能爬下来完整的数据。（最近拉勾网是一次搜索最多显示30页，每页15条，这加起来一次搜索也就500条信息不到，但是通过查看网络请求，可以发现，拉勾网一次搜索提供的数据是5000多条。）<br>所以我是通过多关键次多次爬取。采用的是拉勾首页提供的关键词，加上自己的添加。关键词列表如下（技术岗）：<br><img src="./1463292485128.png" alt="Alt text"></p>
-<h2 id="数据量"><a href="#数据量" class="headerlink" title="数据量"></a>数据量</h2><p>总共数据量一共4w多条。分析直接采用的现成的统计工具（数说立方）生成结果，还挺方便。</p>
-<h2 id="工资处理"><a href="#工资处理" class="headerlink" title="工资处理"></a>工资处理</h2><p>由于拉勾网的工资数据是采用的工资范围的显示方式：<code>20k-50k</code><br>所以我记录了<code>最小值</code>和<code>最大值</code>，<code>平均值</code>直接采用<code>最小值</code>和<code>最大值</code>的平均（当然这肯定不准确，但是也有一定的参考意义）</p>
-<h1 id="分析报告"><a href="#分析报告" class="headerlink" title="分析报告"></a>分析报告</h1><p>好了，我知道大部分人只关注这一部分：</p>
-<h2 id="岗位情况"><a href="#岗位情况" class="headerlink" title="岗位情况"></a>岗位情况</h2><h3 id="总体岗位需求"><a href="#总体岗位需求" class="headerlink" title="总体岗位需求"></a>总体岗位需求</h3><p>我列出了前20位的岗位需求，先看图：<br><img src="./1463291633305.png" alt="Alt text"></p>
-<p>明显需求最大的还是<code>java</code>，<code>PHP</code>，<code>Android</code> 3者均爆表（&gt;=5000），<code>.Net</code>，<code>iOS</code>紧跟其后。<code>Pytho</code>n的寻求和<code>c#</code>差不多，还高一点。<code>大数据</code>和<code>数据挖掘</code>这两个关键词的职位目前需求也很旺盛，这和目前大家的预期都还是挺一致的。</p>
-<p>这里发现前两年火的<code>云计算</code>需求没那么旺盛，哪怕加上<code>Hadoop</code>都没破千（理论上都不能用加），这点还是挺出乎我意料外</p>
-<p>的。<code>Node.js</code>我觉得目前需求小了点，但是我还是对其保持乐观的看法。</p>
-<p><code>html5</code>目前需要也比较旺盛，前景还是很乐观的嘛。</p>
-<p>这里有意思的是C在C++前面，然后我看了看C的都是什么职位，然后我就懂了，也很好理解，搜C关键词肯定会把C++带上。目前招C大部分是C/C++一起招的，纯C的还是少。<br><img src="./1463293234267.png" alt="Alt text"></p>
-<p>###岗位平均工资<br>我们看看前20的岗位工资情况：<br><img src="./1463293722862.png" alt="Alt text"><br>这里基本和需求调了个，工资最高的是<code>推荐</code>，<code>机器学习</code>,<code>搜索</code>,<code>自然语言处理</code>,<code>docker</code>,<code>大数据类</code>，<code>语音识别</code>，这个很符合目前市场的预期，在大数据，机器学习还有人工智能的大背景下，推荐，搜索，还有自然语言处理借势自然会火一把。（相关专业的同学请吃饭好不好？？）</p>
-<p>这里值得注意的是中间件火了。我记得刚听到这个词还是大四的时候，听国外大学教授介绍docker，他说：“国外这个已经非常火了，中国总是落后国外几年，今后这个会火的。”</p>
-<p>我当时还不信，我现在信了。虽然岗位需求还没上来，但是，工资已经先上来了。</p>
-<p>###工资平均最大值<br>最大值的平均值平均要提高5k左右，最高的还是那几个。<br><img src="./1463294232166.png" alt="Alt text"></p>
-<p>###语言类需求</p>
-<p>没太多出乎意料的地方<br><img src="./1463296621011.png" alt="Alt text"></p>
-<p>###语言类平均工资</p>
-<p><img src="./1463298136538.png" alt="Alt text"><br><code>Go</code>，<code>python</code>，<code>ruby</code>三大脚本语言领先。<code>js</code>超过了<code>java</code>,虽然考虑需求量依然是java需求量大，但是脚本语言前途还是挺光明的，至少目前的趋势下，你得至少会一门脚本语言。</p>
-<p>###非语言类需求<br>依旧是数据类占大头<br><img src="./1463296906641.png" alt="Alt text"></p>
-<p>##城市报告</p>
-<p>###城市岗位需求<br>不出意外”北上广深杭” 依然占据前5，不过我没想到北京会拉别的城市那么多。还有，技术岗需求中<code>杭州</code>超过<code>广州</code>了也。（当然这个数据毕竟不是完整的数据）<br><img src="./1463294453417.png" alt="Alt text"></p>
-<p>###城市工资情况<br>工资前几名还是<code>北京</code>，<code>上海</code>，<code>深圳</code>，<code>香港</code>,<code>杭州</code>明显高于其他城市。广州在平均工资这里偏低了。<br><img src="./1463297481553.png" alt="Alt text"></p>
-<p>###城市工资最大值平均情况<br>工资前几名还是<code>北京</code>，<code>上海</code>，<code>深圳</code>，<code>杭州</code>，<code>香港</code>,这里<code>杭州</code>大于<code>香港</code>了，但是整体差不多。也是明显高于其他城市。<br>（注意这里都是平均情况，要说最高的，我还见过有50k,100k的呢）<br><img src="./1463297644426.png" alt="Alt text"></p>
-<p>##其他</p>
-<p>###公司规模与工资情况<br><img src="./1463298630578.png" alt="Alt text"></p>
-<p>还是工资跟公司规模成正比，这点貌似还是没错</p>
-<p>###招聘岗位词云<br><img src="./1463298726359.png" alt="Alt text"></p>
-<p>###公司最喜欢贴的标签</p>
-<p><img src="./1463298807211.png" alt="Alt text"></p>
-<p><code>双薪</code>，<code>年假</code>。。。我竟然还在旁边看见一个<code>美女</code>。</p>
-<p>怎么看着那么不靠谱呢？有句话怎么说来着？得不到的永远在骚动？所以公司就用这些标签去吸引人才了，反正我是不信互联网公司有那么多假。。。</p>
-<p>###公司优势<br><img src="./1463298965227.png" alt="Alt text"></p>
-<p>参考上面。</p>
-<p>#总结</p>
-<p>###还是大数据<br><img src="./1463299709772.png" alt="Alt text"><br>通过上面很粗略的分析，可以看出来，目前市场需求最大并且工资最高的都还是有关大数据类的工作。所以小伙伴你们懂的。</p>
-<p>###脚本语言<br><img src="./1463300165819.png" alt="Alt text"></p>
-<p> 在语言方面，脚本语言越来越火了，如果你会相对小众的脚本语言go，ruby（注意我这里用了相对小众，拥护者别打我），估计以后找个高薪的机会应该不难（前提是精通），不过小众的脚本语言在中国的学习资料不算多，交流也相对麻烦点。<br> <img src="./1463300116567.png" alt="Alt text"><br> PS. go语言真的不打算换吉祥物了???</p>
-<p>###大前端<br>我觉得现在的前端应该和以前只会切图的前端web区分开了，随着js的重要性继续增强，google v8引擎的推出。以后应用可能会往web倾斜，目前也有web app转本地APP的方案了，以后应该能做到一次编写，跨平台运行。是不是有可能开启一个大航海（大前端）时代呢（个人看法，轻喷）<br><img src="./1463296859625.png" alt="Alt text"></p>
-<p>除此之外，<code>html5</code>现在招聘信息也挺多的了。是不是意味着中国大前端的春天要来了？</p>
-<p><img src="./1463296820935.png" alt="Alt text"></p>
-<p>加上<code>Node.js</code>一出，我感觉<code>全栈</code>的概念又得火</p>
-<p>#声明：<br>（我觉得还是得加个声明，不然估计会有人找我麻烦的）</p>
-<p>以上信息均是个人根据兴趣分析结果，不代表任何机构的立场。<br>由于不是大数据的结果，可能会有不准确的地方，大家仅供参考。</p>
-<p>最后，对拉勾公司提供的信息表示感谢，没封我的ip。（虽然不是主动提供的）这还是个好公司，给程序猿们提供了很多有关就业有用的信息。</p>
-<blockquote>
-<p>以上爬取内容仅供学习交流使用，禁止用于商业行为。</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/hello-world/" class="article-date">
-      <time datetime="2016-05-17T05:33:50.205Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016 Huang Kai
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
-        </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
-    </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 6;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
 </script>
+
+  <title> VoidSky </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">VoidSky</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
+  <p class="site-subtitle">我的世界我做主</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/GitBook入门（用github做出第一本书）——超详细配图说明/" itemprop="url">
+                  GitBook入门（用github做出第一本书）——超详细配图说明
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>我最近接触到gitbook，发现它支持markdown和git，刚好把我之前在github上的笔记可以生成一本书，于是我就开始着手捣鼓gitbook，一下午的时间就弄的差不多了，说明这个东西还是挺容易的，可以看看我的书：<br><a href="https://www.gitbook.com/book/hk029/leetbook/details">《LeetBook（LeetCode详解）》</a>。</p>
+</blockquote>
+<p>比较建议直接在github上部署你的框架，然后再导入gitbook。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/GitBook入门（用github做出第一本书）——超详细配图说明/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单/" itemprop="url">
+                  【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <hr>
+<p>title: 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单.<br>date: 2016-5-10 20:10:33</p>
+<h2 id="tags-爬虫"><a href="#tags-爬虫" class="headerlink" title="tags: 爬虫"></a>tags: 爬虫</h2>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）/" itemprop="url">
+                  【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>上次挖了一个坑，今天终于填上了，还记得之前我们做的拉勾爬虫吗？那时我们实现了一页的爬取，今天让我们再接再厉，实现多页爬取，顺便实现职位和公司的关键词搜索功能。</p>
+</blockquote>
+<p>之前的内容就不再介绍了，不熟悉的请一定要去看之前的文章，代码是在之前的基础上修改的</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/" itemprop="url">
+                  【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="5-14更新"><a href="#5-14更新" class="headerlink" title="5-14更新"></a>5-14更新</h2><p>注意：目前拉勾网换了json结构，之前是<code>content</code> - <code>result</code> 现在改成了<code>content</code>- <code>positionResult</code> - <code>result</code>,所以大家写代码的时候要特别注意加上一层<code>positionResult</code>的解析。我下面代码已经修改</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/【Python爬虫】入门知识/" itemprop="url">
+                  【Python爬虫】入门知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="爬虫基本知识"><a href="#爬虫基本知识" class="headerlink" title="爬虫基本知识"></a><strong>爬虫基本知识</strong></h1><hr>
+<p>这阵子需要用爬虫做点事情，于是系统的学习了一下python爬虫，觉得还挺有意思的，比我想象中的能干更多的事情，这里记录下学习的经历。</p>
+<p>网上有关爬虫的资料特别多，写的都挺复杂的，我这里不打算讲什么大道理，因为其实爬虫挺好理解的。就是下面一个流程：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-5b0e9655255b2b83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="人生日历截图20160513201530.png"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/【Python爬虫】入门知识/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/你的方向值多少钱？从拉勾网数据看目前【IT市场行情】/" itemprop="url">
+                  你的方向值多少钱？从拉勾网数据看目前【IT市场行情】
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/你的方向值多少钱？从拉勾网数据看目前【IT市场行情】/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/10/每个人都该学git，最新GitHub与Git指令快速上手/" itemprop="url">
+                  每个人都该学git，最新GitHub与Git指令快速上手
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="2016-5-17更新"><a href="#2016-5-17更新" class="headerlink" title="2016/5/17更新"></a>2016/5/17更新</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/10/每个人都该学git，最新GitHub与Git指令快速上手/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Huang Kai" />
+          <p class="site-author-name" itemprop="name">Huang Kai</p>
+          <p class="site-description motion-element" itemprop="description">voidsky</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Huang Kai</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
 </body>
 </html>

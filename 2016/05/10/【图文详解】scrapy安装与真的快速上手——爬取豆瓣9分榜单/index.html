@@ -1,0 +1,681 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="爬虫," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="title: 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单.date: 2016-5-10 20:10:33
+tags: 爬虫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单">
+<meta property="og:url" content="http://yoursite.com/2016/05/10/【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单/index.html">
+<meta property="og:site_name" content="VoidSky">
+<meta property="og:description" content="title: 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单.date: 2016-5-10 20:10:33
+tags: 爬虫">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155641934.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155705992.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155857681.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155884211.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156039788.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156267799.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156341747.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156401562.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156486416.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156543601.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461157571966.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158239363.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461159057657.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158841648.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158905454.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212313095.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212340944.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212496254.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212650482.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212709798.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212779777.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212813445.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213014150.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213209717.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213275959.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213336223.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213428878.png">
+<meta property="og:updated_time" content="2016-05-19T13:43:57.200Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单">
+<meta name="twitter:description" content="title: 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单.date: 2016-5-10 20:10:33
+tags: 爬虫">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155641934.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单 | VoidSky </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">VoidSky</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我的世界我做主</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-05-10T20:10:33+08:00" content="2016-05-10">
+              2016-05-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>title: 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单.<br>date: 2016-5-10 20:10:33</p>
+<h2 id="tags-爬虫"><a href="#tags-爬虫" class="headerlink" title="tags: 爬虫"></a>tags: 爬虫</h2><a id="more"></a>
+<h1 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a><strong>写在开头</strong></h1><p>现在scrapy的安装教程都明显过时了，随便一搜都是要你安装一大堆的依赖，什么装python（如果别人连python都没装，为什么要学scrapy….）wisted， zope interface，pywin32………现在scrapy的安装真的很简单的好不好！<br>代码我放github上了，可以参考：<br><a href="https://github.com/hk029/doubanbook" target="_blank" rel="external">https://github.com/hk029/doubanbook</a></p>
+<!--more-->
+<h1 id="为什么要用scrapy"><a href="#为什么要用scrapy" class="headerlink" title="为什么要用scrapy"></a><strong>为什么要用scrapy</strong></h1><p>我之前讲过了requests，也用它做了点东西，(<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a>）感觉它就挺好用的呀，那为什么我还要用scrapy呢？</p>
+<p><strong>因为：它！更！好！用！</strong>就这么简单，你只要知道这个就行了。</p>
+<p>我相信所有能找到这篇文章的人多多少少了解了scrapy，我再copy一下它的特点来没太多意义，因为我也不会在这篇文章内深入提。就像你知道系统的sort函数肯定比你自己编的快排好用就行了，如果需要知道为什么它更好，你可以更深入的去看代码，但这里，你只要知道这个爬虫框架别人就专门做这件事的，肯定好用，你只要会用就行。</p>
+<blockquote>
+<p>我希望每个来这里的人，或者每个在找资料的朋友，都能明确自己的目的，我也尽量将文章的标题取的更加的明确。如果这是一篇标题为《快速上手》的文章，那你可能就不要太抱希望于能在这篇文章里找到有关scrapy架构和实现原理类的内容。如果是那样，我可能会取标题为《深入理解scrapy》</p>
+</blockquote>
+<p>好了废话说了那么多，我们就上手把？</p>
+<h1 id="安装scrapy"><a href="#安装scrapy" class="headerlink" title="安装scrapy"></a><strong>安装scrapy</strong></h1><p>一条命令解决所有问题</p>
+<pre><code>pip install scrapy
+</code></pre><p>好吧，我承认如果用的是windows一条命令可能确实不够，因为还要装pywin32</p>
+<p><a href="https://sourceforge.net/projects/pywin32/files/pywin32/" target="_blank" rel="external">https://sourceforge.net/projects/pywin32/files/pywin32/</a></p>
+<p>现在sourceforge变的很慢，如果你们不能打开，我在网盘上也放一个64位的，最新220版本的：<br>链接: <a href="http://pan.baidu.com/s/1geUY6Dd" target="_blank" rel="external">http://pan.baidu.com/s/1geUY6Dd</a> 密码: z2ep</p>
+<p>然后就结束了！！结束了！！好不好！就这么简单！</p>
+<h1 id="豆瓣读书9分书榜单爬取"><a href="#豆瓣读书9分书榜单爬取" class="headerlink" title="豆瓣读书9分书榜单爬取"></a><strong>豆瓣读书9分书榜单爬取</strong></h1><p>我们考虑下做一个什么爬虫呢？简单点，我们做一个豆瓣读书9分书：<br><a href="https://www.douban.com/doulist/1264675/" target="_blank" rel="external">https://www.douban.com/doulist/1264675/</a></p>
+<h2 id="建立第一个scrapy工程"><a href="#建立第一个scrapy工程" class="headerlink" title="建立第一个scrapy工程"></a><strong>建立第一个scrapy工程</strong></h2><p>把scrapy命令的目录加入环境变量，然后输入一条命令</p>
+<pre><code>scrapy startproject doubanbook
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155641934.png" alt=""></p>
+<p>然后你的目录下就有一个文件夹名为doubanbook目录，按照提示，我们cd进目录，然后按提示输入，这里我们爬虫取名为dbbook，网址就是上面的网址</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155705992.png" alt=""></p>
+<h2 id="打开pycharm，新建打开这个文件夹"><a href="#打开pycharm，新建打开这个文件夹" class="headerlink" title="打开pycharm，新建打开这个文件夹"></a><strong>打开pycharm，新建打开这个文件夹</strong></h2><p>关于pytharm的安装配置：<a href="ttp://blog.csdn.net/hk2291976/article/details/51141868" target="_blank" rel="external">Pycharm的配置和使用</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155857681.png" alt=""></p>
+<p>打开后，我们在最顶层的目录上新建一个python文件，取名为main，这是运行的主程序（其实就一行代码，运行爬虫）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461155884211.png" alt=""></p>
+<p>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from scrapy import cmdline</span><br><span class="line">cmdline.execute(&quot;scrapy crawl dbbook&quot;.split())</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156039788.png" alt=""></p>
+<p>然后我们进入spider-dbbook，然后把start_urls里面重复的部分删除（如果你一开始在命令行输入网址的时候，没输入<a href="http://www.那就不用改动）然后把allowed_domains注掉" target="_blank" rel="external">http://www.那就不用改动）然后把allowed_domains注掉</a><br>并且，把parse里面改成</p>
+<pre><code>print response.body
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156267799.png" alt=""></p>
+<p>好了，到此第一个爬虫的框架就搭完了，我们运行一下代码。（注意这里选择main.py）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156341747.png" alt=""></p>
+<p>运行一下，发现没打印东西，看看，原来是403<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156401562.png" alt=""></p>
+<p>说明爬虫被屏蔽了，这里要加一个请求头部，模拟浏览器登录</p>
+<p>在settings.py里加入如下内容就可以模拟浏览器了</p>
+<pre><code>USER_AGENT = &apos;Mozilla/5.0 (Windows NT 6.3; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0&apos;
+</code></pre><p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156486416.png" alt=""></p>
+<p>我们再运行，发现网页内容已经被爬取下来了<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461156543601.png" alt=""></p>
+<p>好了，我们的scrapy教程结束！</p>
+<p>如果真这样结束，我知道你会打我。。</p>
+<h2 id="编写xpath提取标题名和作者名"><a href="#编写xpath提取标题名和作者名" class="headerlink" title="编写xpath提取标题名和作者名"></a><strong>编写xpath提取标题名和作者名</strong></h2><p>这里我们就要得分，标题名和作者名<br>观察网页源代码，用f12，我们可以快速找到，这里不细讲怎么找信息的过程了，具体过程，参考上一个教程<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461157571966.png" alt=""></p>
+<p>根据先大后小的原则，我们先用bd doulist-subject，把每个书找到，然后，循环对里面的信息进行提取</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158239363.png" alt=""></p>
+<p>提取书大框架：</p>
+<pre><code>&apos;//div[@class=&quot;bd doulist-subject&quot;]&apos;
+</code></pre><p>提取题目：</p>
+<pre><code>&apos;div[@class=&quot;title&quot;]/a/text()&apos;
+</code></pre><p>提取得分：</p>
+<pre><code>&apos;div[@class=&quot;rating&quot;]/span[@class=&quot;rating_nums&quot;]/text()&apos;
+</code></pre><p>提取作者：（这里用正则方便点）</p>
+<pre><code>&apos;&lt;div class=&quot;abstract&quot;&gt;(.*?)&lt;br&apos;
+</code></pre><h2 id="编写代码"><a href="#编写代码" class="headerlink" title="编写代码"></a><strong>编写代码</strong></h2><p>经过之前的学习，应该很容易写出下面的代码吧：作者那里用正则更方便提取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">selector = scrapy.Selector(response)</span><br><span class="line">      books = selector.xpath(&apos;//div[@class=&quot;bd doulist-subject&quot;]&apos;)</span><br><span class="line">      for each in books:</span><br><span class="line">          title = each.xpath(&apos;div[@class=&quot;title&quot;]/a/text()&apos;).extract()[0]</span><br><span class="line">          rate = each.xpath(&apos;div[@class=&quot;rating&quot;]/span[@class=&quot;rating_nums&quot;]/text()&apos;).extract()[0]</span><br><span class="line">          author = re.search(&apos;&lt;div class=&quot;abstract&quot;&gt;(.*?)&lt;br&apos;,each.extract(),re.S).group(1)</span><br><span class="line">          print &apos;标题:&apos; + title</span><br><span class="line">          print &apos;评分:&apos; + rate</span><br><span class="line">          print author</span><br><span class="line">          print &apos;&apos;</span><br></pre></td></tr></table></figure></p>
+<p>关键这个代码在哪里编写呢？答案就是还记得大明湖……不对，是还记得刚才输出response的位置吗？就是那里，那里就是我们要对数据处理的地方。我们写好代码，这里注意：</p>
+<ol>
+<li>不是用etree来提取了，改为scrapy.Selector了，这点改动相信难不倒聪明的你</li>
+<li>xpath如果要提取内容，需要在后面加上.extract()，略为不适应，但是习惯还好。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461159057657.png" alt=""></p>
+<p>我们看看结果，不好看，对于注重美观的我们来说，简直不能忍</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158841648.png" alt=""></p>
+<p>加入两条代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title = title.replace(&apos; &apos;,&apos;&apos;).replace(&apos;\n&apos;,&apos;&apos;)</span><br><span class="line">           author = author.replace(&apos; &apos;,&apos;&apos;).replace(&apos;\n&apos;,&apos;&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>再看看结果，这才是我们想要的嘛<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461158905454.png" alt=""></p>
+<p>好了，剩下的事情就是如何把结果写入文件或数据库了，这里我采用写入文件，因为如果是写入数据库，我又得花时间讲数据库的一些基本知识和操作，还是放在以后再说吧。</p>
+<h2 id="items-py"><a href="#items-py" class="headerlink" title="items.py"></a><strong>items.py</strong></h2><p>好了，我们终于要讲里面别的.py文件了，关于这个items.py，你只要考虑它就是一个存储数据的容器，可以考虑成一个结构体，你所有需要提取的信息都在这里面存着。</p>
+<p>这里我们需要存储3个变量，title，rate，author，所以我在里面加入三个变量，就这么简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title = scrapy.Field()</span><br><span class="line">rate = scrapy.Field()</span><br><span class="line">author = scrapy.Field()</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212313095.png" alt=""></p>
+<h1 id="pipelines-py"><a href="#pipelines-py" class="headerlink" title="pipelines.py"></a><strong>pipelines.py</strong></h1><p>一般来说，如果你要操作数据库什么的，需要在这里处理items，这里有个process_item的函数，你可以把items写入数据库，但是今天我们用不到数据库，scrapy自带了一个很好的功能就是Feed exports，它支持多种格式的自动输出。所以我们直接用这个就好了，pipelines维持不变</p>
+<h2 id="settings-py"><a href="#settings-py" class="headerlink" title="settings.py"></a><strong>settings.py</strong></h2><p>Feed 输出需要2个环境变量：</p>
+<blockquote>
+<p>FEED_FORMAT ：指示输出格式，csv/xml/json/<br>FEED_URI : 指示输出位置，可以是本地，也可以是FTP服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FEED_URI = u&apos;file:///G://douban.csv&apos;</span><br><span class="line">FEED_FORMAT = &apos;CSV&apos;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>FEED_URI改成自己的就行了<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212340944.png" alt=""></p>
+<h2 id="dbbook-py修改"><a href="#dbbook-py修改" class="headerlink" title="dbbook.py修改"></a><strong>dbbook.py修改</strong></h2><p>其实也就加了3条命令，是把数据写入item<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212496254.png" alt=""></p>
+<p>当然，你要使用item，需要把item类引入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from doubanbook.items import DoubanbookItem</span><br></pre></td></tr></table></figure></p>
+<p>下面的yield可以让scrapy自动去处理item</p>
+<p>好拉，再运行一下，可以看见G盘出现了一个douban.csv的文件</p>
+<p>用excel打开看一下，怎么是乱码<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212650482.png" alt=""></p>
+<p>没关系又是编码的问题，用可以修改编码的编辑器比如sublime打开一下，<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212709798.png" alt=""></p>
+<p>保存编码为utf-8包含bom，或者用gvim打开：set fileencoding=gbk</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212779777.png" alt=""></p>
+<p>再打开，就正常了</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461212813445.png" alt=""></p>
+<h1 id="爬取剩下页面"><a href="#爬取剩下页面" class="headerlink" title="爬取剩下页面"></a><strong>爬取剩下页面</strong></h1><p>这还只保存了一个页面，那剩下的页面怎么办呢？难道要一个个复制网址？？当然不是，我们重新观察网页，可以发现有个后页的链接，里面包含着后一页的网页链接，我们把它提取出来就行了。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213014150.png" alt=""></p>
+<p>因为只有这里会出现<span class="next">标签，所以用xpath轻松提取</span></p>
+<pre><code>&apos;//span[@class=&quot;next&quot;]/link/@href&apos;
+</code></pre><p>然后提取后 我们scrapy的爬虫怎么处理呢？<br>答案还是yield，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yield scrapy.http.Request(url,callback=self.parse)</span><br></pre></td></tr></table></figure></p>
+<p>这样爬虫就会自动执行url的命令了，处理方式还是使用我们的parse函数</p>
+<p>改后的代码这样：</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213209717.png" alt=""></p>
+<p>这里要加一个判断，因为在最后一页，“后一页”的链接就没了。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213275959.png" alt=""></p>
+<p>好了，我们再运行一下（先把之前的csv删除，不然就直接在后面添加了）可以发现，运行的特别快，十几页一下就运行完了，如果你用requests自己编写的代码，可以比较一下，用scrapy快很多，而且是自动化程度高很多。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213336223.png" alt=""></p>
+<p>我们打开csv，可以看见，有345篇文章了，和豆瓣上一致。<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/scrapy安装与快速上手/1461213428878.png" alt=""></p>
+<p>好了，这个豆瓣9分图书的爬虫结束了，相信通过这个例子，scrapy也差不多能上手，至少编写一般的爬虫是so easy了！</p>
+<p>目前，我们已经能对付大多数网页的内容了，现在爬本小说啥的应该都轻轻松松了，但是为什么我说大多数呢？因为确实还有一些网页我们应付不来，就是用Ajax动态加载的网页，这怎么办呢？且听下回分解：<br><a href="http://www.jianshu.com/p/f030cba076a2" target="_blank" rel="external">【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）</a></p>
+<p>代码我放github上了，可以参考：<br><a href="https://github.com/hk029/doubanbook" target="_blank" rel="external">https://github.com/hk029/doubanbook</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/10/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）/" rel="next" title="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）">
+                <i class="fa fa-chevron-left"></i> 【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/10/GitBook入门（用github做出第一本书）——超详细配图说明/" rel="prev" title="GitBook入门（用github做出第一本书）——超详细配图说明">
+                GitBook入门（用github做出第一本书）——超详细配图说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Huang Kai" />
+          <p class="site-author-name" itemprop="name">Huang Kai</p>
+          <p class="site-description motion-element" itemprop="description">voidsky</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">Artikel</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-爬虫"><span class="nav-number">1.</span> <span class="nav-text">tags: 爬虫</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在开头"><span class="nav-number"></span> <span class="nav-text">写在开头</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要用scrapy"><span class="nav-number"></span> <span class="nav-text">为什么要用scrapy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装scrapy"><span class="nav-number"></span> <span class="nav-text">安装scrapy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#豆瓣读书9分书榜单爬取"><span class="nav-number"></span> <span class="nav-text">豆瓣读书9分书榜单爬取</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#建立第一个scrapy工程"><span class="nav-number">1.</span> <span class="nav-text">建立第一个scrapy工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开pycharm，新建打开这个文件夹"><span class="nav-number">2.</span> <span class="nav-text">打开pycharm，新建打开这个文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写xpath提取标题名和作者名"><span class="nav-number">3.</span> <span class="nav-text">编写xpath提取标题名和作者名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写代码"><span class="nav-number">4.</span> <span class="nav-text">编写代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#items-py"><span class="nav-number">5.</span> <span class="nav-text">items.py</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pipelines-py"><span class="nav-number"></span> <span class="nav-text">pipelines.py</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#settings-py"><span class="nav-number">1.</span> <span class="nav-text">settings.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dbbook-py修改"><span class="nav-number">2.</span> <span class="nav-text">dbbook.py修改</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#爬取剩下页面"><span class="nav-number"></span> <span class="nav-text">爬取剩下页面</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Huang Kai</span>
+</div>
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
