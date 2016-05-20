@@ -23,7 +23,7 @@
 <p>github的优势在与用户群大，而且十分活跃，能在上面找到很多好玩的东西，加上上面建站方便（以后再写）。反正，如果你在找一个托管平台，选github没错！</p>
 <h1 id="创建账户"><a href="#创建账户" class="headerlink" title="创建账户"></a><strong>创建账户</strong></h1><p>之前做代码版本控制都是在bitbucket上面的私有仓库。现在开源社区挺火的，想在github找些开源的工程学习一下，于是加入了github，这里记录一下入门的经历。</p>
 <p>首先创建账户的过程在这里就省略一万字了…</p>
-<p><a href="www.github.com">点这里进github官网</a></p>
+<p><a href="http://www.github.com" target="_blank" rel="external">点这里进github官网</a></p>
 <p>创建完账户，你就可以开始建立自己的第一个仓库了。你会在你奇奇怪怪的默认头像旁边看见一个很大的“+”号，点下去，可以看到2个选项，第一个就是新建个代码仓库。</p>
 <p><img src="http://o7bk1ffzo.bkt.clouddn.com/1463729066845.png" alt=""><br>填好仓库名，然后点上创建一个README，最好也填点说明。</p>
 <p><img src="http://o7bk1ffzo.bkt.clouddn.com/1463729073495.png" alt=""></p>
