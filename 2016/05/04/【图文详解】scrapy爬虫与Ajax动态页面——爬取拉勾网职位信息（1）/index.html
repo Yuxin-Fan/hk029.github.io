@@ -1,0 +1,1104 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="爬虫,python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fa.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="我看不到你，因为我们始终不在同一平行线上。——屋主说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）">
+<meta property="og:url" content="http://voidsky.top/2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/index.html">
+<meta property="og:site_name" content="空纸屋">
+<meta property="og:description" content="我看不到你，因为我们始终不在同一平行线上。——屋主说">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235953808.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235973182.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235986276.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237608678.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237689695.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237819572.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237914563.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238001618.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238089110.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238216601.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238679076.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238727325.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238745514.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238874804.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238984889.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238953420.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1031810-9f8219fe63e91daa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239234472.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239242318.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1031810-f287121e7e4fa46e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242738460.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242703391.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461243136118.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1031810-9487ad42ea32a704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1031810-05a89a011204eb67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-05-20T07:04:25.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）">
+<meta name="twitter:description" content="我看不到你，因为我们始终不在同一平行线上。——屋主说">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235953808.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1） | 空纸屋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">空纸屋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我的世界我做主</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            客厅
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            房间
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于屋主
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            书架
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            墙贴
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            找找找
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-04T20:10:33+08:00" content="2016-05-04">
+              2016-05-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python房间/" itemprop="url" rel="index">
+                    <span itemprop="name">python房间</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/" class="leancloud_visitors" data-flag-title="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>我看不到你，因为我们始终不在同一平行线上。<br>——屋主说</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h2 id="5-14更新"><a href="#5-14更新" class="headerlink" title="5-14更新"></a>5-14更新</h2><p>注意：目前拉勾网换了json结构，之前是<code>content</code> - <code>result</code> 现在改成了<code>content</code>- <code>positionResult</code> - <code>result</code>,所以大家写代码的时候要特别注意加上一层<code>positionResult</code>的解析。我下面代码已经修改</p>
+<p>看这篇文章前，请确认你已经看过了我之前的文章，了解了大概爬虫的思路和基本概念，不然，里面很多内容可能会看不懂。</p>
+<p>你至少得先看这个，不然scrapy怎么用的都不知道—&gt;<a href="http://www.jianshu.com/p/fa614bea98eb" target="_blank" rel="external">scrapy安装与真的快速上手——爬取豆瓣9分榜单</a></p>
+<p>然后如果你想了解有关正则和xpath，你还得看这个–&gt;<a href="http://www.jianshu.com/p/74b94eadae15" target="_blank" rel="external">爬虫的基本概念</a></p>
+<p>如果你想下载图片，你可以看看这个–&gt;<a href="http://www.jianshu.com/p/19c846daccb3" target="_blank" rel="external">【图文详解】python爬虫实战——5分钟做个图片自动下载器</a></p>
+<blockquote>
+<p>现在很多网站都用了一种叫做Ajax（异步加载）的技术，就是说，网页打开了，先给你看上面一部分东西，然后剩下的东西再慢慢加载。<br>所以你可以看到很多网页，都是慢慢的刷出来的，或者有些网站随着你的移动，很多信息才慢慢加载出来。这样的网页有个好处，就是网页加载速度特别快（因为不用一次加载全部内容）。</p>
+</blockquote>
+<p>但是这对我们写爬虫就不方便了，因为你总是爬不到你想要的东西！</p>
+<p>我们举个例子，我因为最近想分析拉勾网有关职位情况的数据，所以我上了他们网站：(注意！爬取的内容仅限于学术交流！请勿用于商业用途！)<br><a href="http://www.lagou.com/zhaopin/" target="_blank" rel="external">http://www.lagou.com/zhaopin/</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235953808.png" alt=""></p>
+<p>可以看到，这里有很多职位信息。注意，这里当我们点下一页</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235973182.png" alt=""></p>
+<p>我们可以发现，网页地址没有更新就直接加载出来了！！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461235986276.png" alt=""></p>
+<p>这明显就是一个动态页面，我们写个爬虫来爬一下网页，看看能得到什么内容，现在应该能很快写出（搭出）一个这样的爬虫吧？（其实啥也没有）</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237608678.png" alt=""></p>
+<p>可以看到输出，你可以把所有源代码浏览一遍，里面没有任何有关职位的信息！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237689695.png" alt=""></p>
+<p>如果你觉得不直观，我教你一招，我们简单的把它输出到一个html看看</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237819572.png" alt=""></p>
+<p>就是这么个情况。。关键部分呢！空的！！！</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461237914563.png" alt=""></p>
+<h1 id="寻找可以网页"><a href="#寻找可以网页" class="headerlink" title="寻找可以网页"></a><strong>寻找可以网页</strong></h1><p>这时候要怎么办呢？难道信息就爬不了吗？？</p>
+<p>当然不是，你要想，它只要是显示到网页上了，就肯定在某个地方，只是我们没找到而已。</p>
+<p>只不过，这个时候，我们就要费点功夫了。我们还是回到刚才的网页上去点F12，这时候，我们用network功能</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238001618.png" alt=""></p>
+<p>这时候你可能看到里面没东西，这是因为它只记录打开后的网络资源的信息。<br>我们按F5刷新一下。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238089110.png" alt=""></p>
+<p>你可以看到开始唰唰的刷出东西来了……太快了，我眼睛有点跟不上了，我们等它停下来，我们随便点个资源，会出现右边的框，我们切换到response</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238216601.png" alt=""></p>
+<p>然后我们就开始找可疑的网页资源。首先，图片，css什么之类的可以跳过，这里有个诀窍，就是一般来说，这类数据都会用json存，所以我们尝试在过滤器中输入json</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238679076.png" alt=""></p>
+<p>我们发现了2个资源感觉特别像，其中有个名字直接有position，我们点击右键，在新标签页打开看看</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238727325.png" alt=""></p>
+<p>虽然看上去很乱（密集恐惧症估计忍不了）但是实际上很有条理，全是键值对应的，这就是json格式，特别适合网页数据交换。</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238745514.png" alt=""></p>
+<p>这里我们发现就是这个了！所有职位信息都在里面，我们赶紧记录下它的网址</p>
+<h1 id="网页构造"><a href="#网页构造" class="headerlink" title="网页构造"></a><strong>网页构造</strong></h1><p>通过观察网页地址可以发现推测出：<br><a href="http://www.lagou.com/jobs/positionAjax.json?这一段是固定的，剩下的我们发现上面有个北京" target="_blank" rel="external">http://www.lagou.com/jobs/positionAjax.json?这一段是固定的，剩下的我们发现上面有个北京</a></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238874804.png" alt=""></p>
+<p>我们把这里改成上海看看，可以看见又出来一个网页内容，刚好和之前网页把工作地改成上海，对应的内容一致</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238984889.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461238953420.png" alt=""></p>
+<p>所以我们可以得出结论，这里city标签就代表着你选的工作地点，那我们要是把工作经验，学历要求，什么都选上呢？？可以直接看到，网址就变了很多</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9f8219fe63e91daa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我们直接把这些复制到刚才我们找到的网页上<br><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239234472.png" alt=""></p>
+<p>可以发现和网页内容一致</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461239242318.png" alt=""></p>
+<p>现在我们可以下结论，我们需要的就是这个网址：<br><a href="http://www.lagou.com/jobs/positionAjax.json" target="_blank" rel="external">http://www.lagou.com/jobs/positionAjax.json</a></p>
+<p>然后后面可以加这些参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gj=应届毕业生&amp;xl=大专&amp;jd=成长型&amp;hy=移动互联网&amp;px=new&amp;city=上海</span><br></pre></td></tr></table></figure></p>
+<p>通过修改这些参数，我们就可以获取不同的职位信息。</p>
+<p><strong>注意：</strong>这里的构造还比较简单，有时候，有些网址的构造远比这个复杂，经常会出现一些你不知道什么意思的id=什么的，这个时候，可能这个id的可能值可能就在别的文件中，你可能还得找一遍，也可能就在网页源代码中的某个地方。<br>还有一种情况，可能会出现time=什么的，这就是时间戳，这时候，需要用time函数构造。总之，要具体情况具体分析。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">time.time()</span><br></pre></td></tr></table></figure></p>
+<h1 id="编写爬虫"><a href="#编写爬虫" class="headerlink" title="编写爬虫"></a><strong>编写爬虫</strong></h1><p>因为这个网页的格式是用的json，那么我们可以用json格式很好的读出内容。<br>这里我们切换成到preview下，然后点content—positionResult—result，可以发现出先一个列表，再点开就可以看到每个职位的内容。为什么要从这里看？有个好处就是知道这个json文件的层级结构，方便等下编码。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-f287121e7e4fa46e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>整个处理的代码就那么几句话，可以可出，这里完全和刚才的层级结构是一致的。先content然后result然后是每个职位的信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jdict = json.loads(response.body)</span><br><span class="line">jcontent = jdict[&quot;content&quot;]</span><br><span class="line">jposresult = jcontent[&quot;positionResult&quot;]</span><br><span class="line">jresult = jposresult[&quot;result&quot;]</span><br><span class="line">for each in jresult:</span><br><span class="line">    print each[&apos;city&apos;]</span><br><span class="line">    print each[&apos;companyName&apos;]</span><br><span class="line">    print each[&apos;companySize&apos;]</span><br><span class="line">    print each[&apos;positionName&apos;]</span><br><span class="line">    print each[&apos;positionType&apos;]</span><br><span class="line">    print each[&apos;salary&apos;]</span><br><span class="line">    print &apos;&apos;</span><br></pre></td></tr></table></figure></p>
+<p>当然还是要引入json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242738460.png" alt=""></p>
+<p>我们可以运行看看效果</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461242703391.png" alt=""></p>
+<p>然后，我们可以把信息存到文件或者数据库了，那就是之前学过的内容了。</p>
+<h2 id="修改items-py"><a href="#修改items-py" class="headerlink" title="修改items.py"></a><strong>修改items.py</strong></h2><p>加入你需要的内容</p>
+<p><img src="https://raw.githubusercontent.com/hk029/blog/master/爬虫/动态加载网页爬取/1461243136118.png" alt=""></p>
+<h2 id="修改settings-py"><a href="#修改settings-py" class="headerlink" title="修改settings.py"></a><strong>修改settings.py</strong></h2><p>看你是需要存入数据库还是文件，之前都说过了</p>
+<h2 id="修改pipelines-py"><a href="#修改pipelines-py" class="headerlink" title="修改pipelines.py"></a><strong>修改pipelines.py</strong></h2><p>如果需要加入数据库，这里加上数据库操作，如果需要写入文件，可能不用修改这个文件</p>
+<h2 id="修改parse"><a href="#修改parse" class="headerlink" title="修改parse()"></a><strong>修改parse()</strong></h2><p>把数据加入item，然后yield，大家应该很熟悉了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-9487ad42ea32a704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def parse(self, response):</span><br><span class="line">    item = LagouItem()</span><br><span class="line">    jdict = json.loads(response.body)</span><br><span class="line">    jcontent = jdict[&quot;content&quot;]</span><br><span class="line">    jposresult = jcontent[&quot;positionResult&quot;]</span><br><span class="line">    jresult = jposresult[&quot;result&quot;]</span><br><span class="line">    for each in jresult:</span><br><span class="line">        item[&apos;city&apos;]=each[&apos;city&apos;]</span><br><span class="line">        item[&apos;companyName&apos;] = each[&apos;companyName&apos;]</span><br><span class="line">        item[&apos;companySize&apos;] = each[&apos;companySize&apos;]</span><br><span class="line">        item[&apos;positionName&apos;] = each[&apos;positionName&apos;]</span><br><span class="line">        item[&apos;positionType&apos;] = each[&apos;positionType&apos;]</span><br><span class="line">        item[&apos;positionAdvantage&apos;] = each[&apos;positionAdvantage&apos;]</span><br><span class="line">        item[&apos;companyLabelList&apos;] = each[&apos;companyLabelList&apos;]</span><br><span class="line">        item[&apos;salary&apos;] = each[&apos;salary&apos;]</span><br><span class="line">        yield item</span><br></pre></td></tr></table></figure>
+<p>最后效果差不多是这样的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1031810-05a89a011204eb67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>但是，这里还只爬了一个网页的内容，对于更多页面的内容，怎么获取呢？我在下篇博客会有介绍，有兴趣的童鞋可以自己试试看如果获取下一页的内容，用上面教的查找资源的办法。</p>
+<p><a href="http://www.jianshu.com/p/982dd9a368dd" target="_blank" rel="external">【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/upload/qrcode.jpg" alt="voidsky wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号,订阅我的博客</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/upload/money.png" alt="voidsky WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/upload/zfb_reward.png" alt="voidsky Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/03/【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单/" rel="next" title="【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单">
+                <i class="fa fa-chevron-left"></i> 【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/05/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）/" rel="prev" title="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2）">
+                【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（2） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/"
+     data-title="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）"
+     data-content=""
+     data-url="http://voidsky.top/2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/"
+           data-title="【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）" data-url="http://voidsky.top/2016/05/04/【图文详解】scrapy爬虫与Ajax动态页面——爬取拉勾网职位信息（1）/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="voidsky" />
+          <p class="site-author-name" itemprop="name">voidsky</p>
+          <p class="site-description motion-element" itemprop="description">一只生活在自己精神世界的程序猿,喜欢折腾一且有意思的新鲜技术</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hk029" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/30f737ee0051/" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-leanpub"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/voidsky" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="blog.csdn.net/hk2291976" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-contao"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-14更新"><span class="nav-number">1.</span> <span class="nav-text">5-14更新</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寻找可以网页"><span class="nav-number"></span> <span class="nav-text">寻找可以网页</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网页构造"><span class="nav-number"></span> <span class="nav-text">网页构造</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编写爬虫"><span class="nav-number"></span> <span class="nav-text">编写爬虫</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改items-py"><span class="nav-number">1.</span> <span class="nav-text">修改items.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改settings-py"><span class="nav-number">2.</span> <span class="nav-text">修改settings.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改pipelines-py"><span class="nav-number">3.</span> <span class="nav-text">修改pipelines.py</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改parse"><span class="nav-number">4.</span> <span class="nav-text">修改parse()</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">voidsky</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pucI9slVgJFvBInGwT4rfDp8-gzGzoHsz", "ugN70neC2eDJ5B6vUiVogAyd");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

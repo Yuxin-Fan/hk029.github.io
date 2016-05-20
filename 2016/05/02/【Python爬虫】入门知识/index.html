@@ -1,0 +1,1073 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="爬虫,python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fa.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="就算你是特别聪明,也要学习,从头学起!——屠格涅夫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【python爬虫】入门知识">
+<meta property="og:url" content="http://voidsky.top/2016/05/02/【Python爬虫】入门知识/index.html">
+<meta property="og:site_name" content="空纸屋">
+<meta property="og:description" content="就算你是特别聪明,也要学习,从头学起!——屠格涅夫">
+<meta property="og:image" content="http://o7bk1ffzo.bkt.clouddn.com/1463727167826">
+<meta property="og:updated_time" content="2016-05-20T06:53:05.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【python爬虫】入门知识">
+<meta name="twitter:description" content="就算你是特别聪明,也要学习,从头学起!——屠格涅夫">
+<meta name="twitter:image" content="http://o7bk1ffzo.bkt.clouddn.com/1463727167826">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 【python爬虫】入门知识 | 空纸屋 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">空纸屋</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我的世界我做主</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            客厅
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            房间
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于屋主
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            书架
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            墙贴
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            找找找
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                【python爬虫】入门知识
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T20:10:33+08:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python房间/" itemprop="url" rel="index">
+                    <span itemprop="name">python房间</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/02/【Python爬虫】入门知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/02/【Python爬虫】入门知识/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/02/【Python爬虫】入门知识/" class="leancloud_visitors" data-flag-title="【python爬虫】入门知识">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>就算你是特别聪明,也要学习,从头学起!<br>——屠格涅夫</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>这阵子需要用爬虫做点事情，于是系统的学习了一下python爬虫，觉得还挺有意思的，比我想象中的能干更多的事情，这里记录下学习的经历。</p>
+<p>网上有关爬虫的资料特别多，写的都挺复杂的，我这里不打算讲什么大道理，因为其实爬虫挺好理解的。就是下面一个流程：</p>
+<p><img src="http://o7bk1ffzo.bkt.clouddn.com/1463727167826" alt="your text"></p>
+<p>爬虫的功能就是把网页源代码想办法爬下来，然后分析出需要的内容。总结起来就是2个部分：</p>
+<ol>
+<li>爬</li>
+<li>提取</li>
+</ol>
+<p>所以，整个爬虫需要掌握的技能，就是如何高效的爬，如何快速的分析提取所需要的内容。</p>
+<h1 id="如何爬？"><a href="#如何爬？" class="headerlink" title="如何爬？"></a><strong>如何爬？</strong></h1><h2 id="Requests"><a href="#Requests" class="headerlink" title="Requests"></a><strong>Requests</strong></h2><p>说实话，之前为了找爬虫的教程，走了挺多弯路的，因为现在很多教程刚上来就介绍urllib，urllib2这两个python自带的有关网页的包，所以刚开始我的单线程爬虫实现也都是基于urllib的，不仅代码多，而且效率还低。实际上，目前来说，这两个已经很过时了，目前用的比较多的是requests这个第三方包（这里我也是偶然间发现极客学院有关爬虫的视频，让我少走那么多弯路，这里我就不说是什么视频了，以免有广告的嫌疑，大家有兴趣的可以自己去搜）。<br>正如requests的官方网页说的：</p>
+<blockquote>
+<p>Requests: HTTP for Humans</p>
+</blockquote>
+<p>它目前应该是python下最好的Http库了。它还有很多别的特性：</p>
+<blockquote>
+<p>Requests 使用的是 urllib3，继承了urllib2的所有特性。Requests支持HTTP连接保持和连接池，支持使用cookie保持会话，支持文件上传，支持自动确定响应内容的编码，支持国际化的 URL 和 POST 数据自动编码。</p>
+</blockquote>
+<p>上面介绍的是单线程爬虫，然后，如果要提高爬的效率，并行化肯定必不可少，那么scrapy就可以解决你的问题。然后还有js动态加载的问题。那些我以后也会慢慢加上来。</p>
+<h2 id="Requests安装"><a href="#Requests安装" class="headerlink" title="Requests安装"></a><strong>Requests安装</strong></h2><pre><code>pip install requests
+</code></pre><p>所有的python第三方包的安装都可以用pip，如果cmd中无法输入pip命令，请把C:\Python27\Scripts加入PATH环境变量。</p>
+<p>注：这里不推荐使用easy_install  因为这个只管安装，不管卸载。</p>
+<h2 id="Requests使用"><a href="#Requests使用" class="headerlink" title="Requests使用"></a><strong>Requests使用</strong></h2><p>基本知道一个requests.get()和requests.post()就行了。</p>
+<p>同样它还有<br>requests.head()<br>requests.delete()<br>功能，不过用的不多。需要的时候，查手册就好了。<br>这里有个文档写requests写的挺全面的。可以看看：<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="external">requests快速上手</a></p>
+<p>requests的返回值可以有多种形式输出，最常用的是<br>“.text”和”.content”，前者输出unicode，后者输出二进制<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests  </span><br><span class="line">url = <span class="string">'http://www.baidu.com'</span></span><br><span class="line">html = requests.get(url)</span><br><span class="line"><span class="keyword">print</span> html.text</span><br></pre></td></tr></table></figure></p>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;&lt;!--STATUS OK--&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt;&lt;meta content=&quot;always&quot; name=&quot;referrer&quot;&gt;&lt;meta name=&quot;theme-color&quot; content=&quot;# 2932e1&quot;&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&lt;link rel=&quot;search&quot; type=&quot;application/opensearchdescription+xml&quot; href=&quot;/content-search.xml&quot; title=&quot;百度搜索&quot; /&gt;&lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; mask href=&quot;//www.baidu.com/img/baidu.svg&quot;&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//s1.bdstatic.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t1.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t2.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t3.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t10.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t11.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//t12.baidu.com&quot;/&gt;&lt;link rel=&quot;dns-prefetch&quot; href=&quot;//b1.bdstatic.com&quot;/&gt;&lt;title&gt;百度一下，你就知道&lt;/title&gt;</span><br><span class="line">……</span><br><span class="line">……</span><br></pre></td></tr></table></figure></p>
+<h1 id="如何提取？"><a href="#如何提取？" class="headerlink" title="如何提取？"></a><strong>如何提取？</strong></h1><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a><strong>正则表达式</strong></h2><p>正则表达式是一个大头！很多也都听过正则表达式，第一印象就是记不住，但是其实也不用特别记忆，因为在爬虫里，用的最多的基本就一个</p>
+<pre><code>(.*?)
+</code></pre><blockquote>
+<p>(    ) ：表示这个内容是我们需要提取的<br>.*     ：表示匹配任意字符0到n次<br>？：表示非贪心，找对第一个就停下来</p>
+</blockquote>
+<p>我来解释下为什么在爬虫里只要这个pattern就行了。<br>在html网页源代码中，我们需要找的内容一般都是被某些标签包围的，如果我们能保证找到我们需要的内容左右的标签（并且他们是独一无二的）那么我们很容易写出一个正则表达式：</p>
+<pre><code>&lt;XXX&gt;(.*?)&lt;/XXX&gt;
+</code></pre><p>把其中的内容提取出来</p>
+<h2 id="python正则模块使用"><a href="#python正则模块使用" class="headerlink" title="python正则模块使用"></a><strong>python正则模块使用</strong></h2><p>python的正则模块是re，主要用的函数是（re.S的意思是让”.”可以匹配换行符，不然有些标签头和尾是分几行的，就会匹配失败）</p>
+<pre><code>findall(pattern,str,re.S)
+</code></pre><p>主力部队，把所有满足正则的内容提取出来，用于匹配满足某个条件的大量我们需要的内容。（比如所有的图片，所有的网址，所有的回复，所有的链接……）。它在网页提取中占了主要地位，工作量大，任务重，所以是主力部队。</p>
+<pre><code>search(pattern,str,re.S)
+</code></pre><p>狙击手，用来匹配第一个找到的元素，它的目标目的就是找到我们明显知道只有一个的元素比如标题什么的，一旦找到就结束，所以它的执行速度很快。它的目标明确，效率高，所以是狙击手的角色。</p>
+<pre><code>sub(pattern,str,replace)
+</code></pre><p>后勤，它的功能是替换，一般用于替换一个网页地址中的关键词，替换页码等。它看似不重要，但是往往能在很多方面给我们提供便利，所以是后勤。</p>
+<p>注意：正则有时候一步不能完成我们需要的功能，可能需要进行几步操作，这时候，我们一般先提取大的部分，在从大部分里面提取我们需要的部分</p>
+<p>我们看个很简单的例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设下面是一个源码，我想保存里面所有的链接</span></span><br><span class="line">text = <span class="string">'&lt;a href = "www.baidu.com"&gt;....'</span></span><br><span class="line">urls = re.findall(<span class="string">'&lt;a href = (.*?)&gt;'</span>,text,re.S)</span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> urls:</span><br><span class="line">	<span class="keyword">print</span> each</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设我需要爬取当前网页的头部</span></span><br><span class="line">html = <span class="string">'''</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;title&gt;爬虫的基本知识&lt;/title&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">……</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">'''</span></span><br><span class="line"><span class="keyword">print</span> re.search(<span class="string">'&lt;title&gt;(.*?)&lt;/title&gt;'</span>,html,re.S).group(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 这里group(1)表示第一个括号的内容，如果正则里面有多个括号，这里可以通过group(i)返回第i个空格里的内容</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设下面是一个贴吧的帖子地址，有很多页，每一页就是靠后面的pn=几来区分的，我们输出前10页的网址</span></span><br><span class="line">Pages = <span class="string">'http://tieba.baidu.com/p/4342201077?pn=1'</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>): </span><br><span class="line">	<span class="keyword">print</span> re.sub(<span class="string">'pn=\d'</span>,<span class="string">'pn=%d'</span>%i,Pages)</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;www.baidu.com&quot;</span><br><span class="line">爬虫的基本知识</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=0</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=1</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=2</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=3</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=4</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=5</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=6</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=7</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=8</span><br><span class="line">http://tieba.baidu.com/p/4342201077?pn=9</span><br></pre></td></tr></table></figure>
+<h2 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a><strong>XPath</strong></h2><p>如果说正则表达式就已经让你觉得很神奇了，那XPath真是要吓死你了。这真是个神器，它让提取信息网页信息变得更加轻松。XPath是一个树型的结构，比较符合“html”的层次结构。</p>
+<blockquote>
+<p>XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言。XPath基于XML的树状结构，提供在数据结构树中找寻节点的能力。起初 XPath 的提出的初衷是将其作为一个通用的、介于XPointer与XSLT间的语法模型。但是 XPath 很快的被开发者采用来当作小型查询语言。</p>
+</blockquote>
+<p>我觉得视频中老师的解释超精彩：如果你提取信息就像让你找一栋建筑，那么正则就是告诉你建筑左边是什么，右边是什么，但是全国可能有很多都满足条件的，你找起来还是不方便。</p>
+<pre><code>红房子(.*?)绿房子
+</code></pre><p>XPath就是告诉你，这个建筑在北京市——海淀区——中关村——15号街——那栋黄色的建筑，你可以马上找到对应的建筑。如果一个地名只有一个地方有，那么你更可以简化成“中关村——15号街”</p>
+<pre><code>//北京市/海淀区/中关村/15号街[@房子颜色=黄色]/text()
+//中关村/15号[@房子颜色=黄色]/text()
+</code></pre><p>也许在这里你还没能体会到他们之间的差别，但是相信我，当你遇到复杂的html分析的时候，你会发现它的厉害之处的。比如下面的例子，我想把Hello，my world!打印出来用正则需要考虑一下吧？但是用XPath就简单很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;class&quot;&gt;Hello，</span><br><span class="line">    &lt;font color=red&gt;my</span><br><span class="line">	world!</span><br><span class="line">&lt;div&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="XPath语法"><a href="#XPath语法" class="headerlink" title="XPath语法"></a><strong>XPath语法</strong></h3><p>XPath你只需要知道这些语法</p>
+<blockquote>
+<p>//  根节点<br>/ 下一层路径<br>[@XX=xx]  特定的标签</p>
+<p>/text()   以文本返回<br>/@para  返回参数</p>
+<p>string(.)   当前层的所有内容作为一个字符串输出<br>start-with(str)  所有以这个str开头的标签</p>
+</blockquote>
+<p>下面是一个简单的例子</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line">html=</span><br><span class="line"><span class="string">'''</span><br><span class="line">&lt;div id="test1"&gt;content1&lt;/div&gt;</span><br><span class="line">&lt;div id="test2"&gt;content2&lt;/div&gt;</span><br><span class="line">&lt;div id="test3"&gt;content3&lt;/div&gt;</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">selector = etree.HTML(html)</span><br><span class="line">content = selector.XPath(<span class="string">'//div[start-with(@id,"test")]/text()'</span>)</span><br><span class="line"><span class="keyword">for</span> each <span class="keyword">in</span> content:</span><br><span class="line">	<span class="keyword">print</span> each</span><br><span class="line"></span><br><span class="line">html1=</span><br><span class="line"><span class="string">'''</span><br><span class="line">&lt;div id="class"&gt;Hello,</span><br><span class="line">    &lt;font color=red&gt;my&lt;/font&gt;</span><br><span class="line">	world!</span><br><span class="line">&lt;div&gt;</span><br><span class="line">'''</span></span><br><span class="line"></span><br><span class="line">selector = etree.HTML(html)</span><br><span class="line">tmp = selector.XPath(<span class="string">'//div[@id="class"]'</span>)[<span class="number">0</span>]</span><br><span class="line">info = tmp.XPath(<span class="string">'string(.)'</span>)</span><br><span class="line">content2 = info.replace(<span class="string">'\n'</span>,<span class="string">''</span>)</span><br><span class="line"><span class="keyword">print</span> content2</span><br></pre></td></tr></table></figure>
+<p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">content 1</span><br><span class="line">content 2</span><br><span class="line">content 3</span><br><span class="line">Hello,        my        world!</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/upload/qrcode.jpg" alt="voidsky wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号,订阅我的博客</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/upload/money.png" alt="voidsky WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/upload/zfb_reward.png" alt="voidsky Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/爬虫/" rel="tag">#爬虫</a>
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/01/GitBook入门（用github做出第一本书）——超详细配图说明/" rel="next" title="GitBook入门（用github做出第一本书）——超详细配图说明">
+                <i class="fa fa-chevron-left"></i> GitBook入门（用github做出第一本书）——超详细配图说明
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/03/【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单/" rel="prev" title="【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单">
+                【图文详解】scrapy安装与真的快速上手——爬取豆瓣9分榜单 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/05/02/【Python爬虫】入门知识/"
+     data-title="【python爬虫】入门知识"
+     data-content=""
+     data-url="http://voidsky.top/2016/05/02/【Python爬虫】入门知识/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/02/【Python爬虫】入门知识/"
+           data-title="【python爬虫】入门知识" data-url="http://voidsky.top/2016/05/02/【Python爬虫】入门知识/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="voidsky" />
+          <p class="site-author-name" itemprop="name">voidsky</p>
+          <p class="site-description motion-element" itemprop="description">一只生活在自己精神世界的程序猿,喜欢折腾一且有意思的新鲜技术</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hk029" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/users/30f737ee0051/" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-leanpub"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/voidsky" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="blog.csdn.net/hk2291976" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-contao"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何爬？"><span class="nav-number">1.</span> <span class="nav-text">如何爬？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests"><span class="nav-number">1.1.</span> <span class="nav-text">Requests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests安装"><span class="nav-number">1.2.</span> <span class="nav-text">Requests安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Requests使用"><span class="nav-number">1.3.</span> <span class="nav-text">Requests使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何提取？"><span class="nav-number">2.</span> <span class="nav-text">如何提取？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">2.1.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python正则模块使用"><span class="nav-number">2.2.</span> <span class="nav-text">python正则模块使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XPath"><span class="nav-number">2.3.</span> <span class="nav-text">XPath</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XPath语法"><span class="nav-number">2.3.1.</span> <span class="nav-text">XPath语法</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">voidsky</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myblog"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pucI9slVgJFvBInGwT4rfDp8-gzGzoHsz", "ugN70neC2eDJ5B6vUiVogAyd");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
